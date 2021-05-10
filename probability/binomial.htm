@@ -1,0 +1,132 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Math Magic - Binomial Expansions</title>
+<STYLE TYPE="text/css">
+<!--
+A:hover {text-decoration: none; color="#FF4500"}
+--></STYLE>
+   <script LANGUAGE="JAVASCRIPT">
+      window.status = "Math-Magic.com: The #1 source on the Net for all your mental math needs!!!"
+   </script>
+<meta name="Microsoft Theme" content="sumipntg 011, default">
+</head>
+
+<body background="../_themes/sumipntg/sumtextb.jpg" bgcolor="#FFFFFF" text="#000066" link="#3333CC" vlink="#666699" alink="#990099"><!--mstheme--><font face="Verdana, Arial, Helvetica">
+
+<p align="center"><a name="top"></a><img border="0" src="../math_magic2.gif" width="96" height="68"><!--webbot
+bot="Navigation" S-Type="banner" S-Rendering S-Orientation B-Include-Home
+B-Include-Up U-Page S-Target startspan --><img src="_derived/binomial.htm_cmp_sumipntg010_bnr.gif" width="600" height="60" border="0" alt="Binomial Expansions"><!--webbot
+bot="Navigation" endspan i-checksum="59500" -->
+</p>
+<p align="center"><!--webbot bot="Navigation" S-Type="siblings"
+S-Orientation="horizontal" S-Rendering="graphics" B-Include-Home="TRUE"
+B-Include-Up="FALSE" U-Page S-Target startspan --><script language="JavaScript"><!--
+MSFPhover = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )) || 
+  ((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 ))); 
+function MSFPpreload(img) 
+{
+  var a=new Image(); a.src=img; return a; 
+}
+// --></script><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav1n=MSFPpreload("../_derived/home_cmp_sumipntg010_hbtn.gif"); MSFPnav1h=MSFPpreload("../_derived/home_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="../index.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src"><img src="../_derived/home_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Home" align="middle" name="MSFPnav1"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav2n=MSFPpreload("_derived/factorial.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav2h=MSFPpreload("_derived/factorial.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="factorial.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2h.src" onmouseout="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2n.src"><img src="_derived/factorial.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Factorials" align="middle" name="MSFPnav2"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav3n=MSFPpreload("_derived/prob_to_odds.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav3h=MSFPpreload("_derived/prob_to_odds.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="prob_to_odds.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3h.src" onmouseout="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3n.src"><img src="_derived/prob_to_odds.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Probability -&gt; Odds" align="middle" name="MSFPnav3"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav4n=MSFPpreload("_derived/permutations.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav4h=MSFPpreload("_derived/permutations.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="permutations.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4h.src" onmouseout="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4n.src"><img src="_derived/permutations.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Permutations" align="middle" name="MSFPnav4"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav5n=MSFPpreload("_derived/combinations.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav5h=MSFPpreload("_derived/combinations.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="combinations.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5h.src" onmouseout="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5n.src"><img src="_derived/combinations.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Combinations" align="middle" name="MSFPnav5"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav6n=MSFPpreload("_derived/coins.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav6h=MSFPpreload("_derived/coins.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="coins.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6h.src" onmouseout="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6n.src"><img src="_derived/coins.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Coins" align="middle" name="MSFPnav6"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav7n=MSFPpreload("_derived/dice.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav7h=MSFPpreload("_derived/dice.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="dice.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7h.src" onmouseout="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7n.src"><img src="_derived/dice.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Dice" align="middle" name="MSFPnav7"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav8n=MSFPpreload("_derived/cards.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav8h=MSFPpreload("_derived/cards.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="cards.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8h.src" onmouseout="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8n.src"><img src="_derived/cards.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Cards" align="middle" name="MSFPnav8"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav9n=MSFPpreload("_derived/balls.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav9h=MSFPpreload("_derived/balls.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="balls.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9h.src" onmouseout="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9n.src"><img src="_derived/balls.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Colored Balls" align="middle" name="MSFPnav9"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav10n=MSFPpreload("_derived/committee.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav10h=MSFPpreload("_derived/committee.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="committee.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10h.src" onmouseout="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10n.src"><img src="_derived/committee.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Committees" align="middle" name="MSFPnav10"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav11n=MSFPpreload("_derived/arrange.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav11h=MSFPpreload("_derived/arrange.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="arrange.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav11'].src=MSFPnav11h.src" onmouseout="if(MSFPhover) document['MSFPnav11'].src=MSFPnav11n.src"><img src="_derived/arrange.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Arranging Objects" align="middle" name="MSFPnav11"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav12n=MSFPpreload("_derived/words.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav12h=MSFPpreload("_derived/words.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="words.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav12'].src=MSFPnav12h.src" onmouseout="if(MSFPhover) document['MSFPnav12'].src=MSFPnav12n.src"><img src="_derived/words.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Words/Numbers" align="middle" name="MSFPnav12"></a> <img src="_derived/binomial.htm_cmp_sumipntg010_hbtn_p.gif" width="140" height="40" border="0" alt="Binomial Expansions" align="middle"><!--webbot bot="Navigation" endspan i-checksum="26956" -->
+</p>
+<p align="center">(*<a href="../pdf_files/probability/binomial.pdf">View/Download .pdf
+file</a>*)</p>
+<h4><!--mstheme--><font color="#003366">Finding Binomial Expansions:<!--mstheme--></font></h4>
+<p style="text-indent: -.25in; margin-left: .25in">A.&nbsp; Most of the time,
+problems of this type will ask for a simplified coefficient of a particular term
+of a binomial expansion.&nbsp; You will need to be familiar with <a href="combinations.htm">combinations</a>.</p>
+<p style="text-indent: -.25in; margin-left: .25in">B.&nbsp; In general, a
+binomial expansion is expressed by:</p>
+<p align="center">(ax + by)<sup>n</sup> = C(n,0)a<sup>n</sup>x<sup>n</sup> +
+C(n,1)a<sup>n-1</sup>bx<sup>n-1</sup>y +...+C(n,n-1)ab<sup>n-1</sup>xy<sup>n-1</sup>
++ C(n,n)b<sup>n</sup>y<sup>n</sup></p>
+<p style="text-indent: -.25in; margin-left: .25in" align="left">C.&nbsp; In
+general, if you have (ax + by)<sup>n</sup> and you want the r<sup>th</sup> term
+the formula is :</p>
+<p style="text-indent: -.25in; margin-left: .25in" align="center">C(n,r-1) x a<sup>[n-(r-1)]</sup>
+x b<sup>(r-1)</sup></p>
+<p align="center" style="text-indent: -.25in; margin-left: .25in">Note:&nbsp; If
+we have (ax - by)<sup>n</sup>, the formula remains the same except every even
+term is negative.</p>
+<p align="left" style="text-indent: -.25in; margin-left: .25in">D.&nbsp;
+Examples:</p>
+<p align="left" style="text-indent: -.25in; margin-left: .75in">Ex [1]&nbsp; The
+simplified coefficient of the 3rd term of (2x + y)<sup>6</sup> is ____?</p>
+<ol type="a">
+  <li>
+    <p align="left" style="margin-left: .75in">The first step is to find
+    C(6,3-1) or C(6,2) = 15.</li>
+  <li>
+    <p align="left" style="margin-left: .75in">Next, find 2<sup>6-(3-1)</sup> =
+    2<sup>4</sup> = 16.</li>
+  <li>
+    <p align="left" style="margin-left: .75in">Next, find 1<sup>3-1</sup> = 1.</li>
+  <li>
+    <p align="left" style="margin-left: .75in">The answer is 15 x 16 x 1 =
+    240.&nbsp; See <a href="../multiply_numbers/mult_15.htm"><i>Multiplying By
+    15</i></a>.</li>
+</ol>
+<p align="left" style="text-indent: -.25in; margin-left: .75in">Ex [2]&nbsp; The
+simplified coefficient of the x<sup>3</sup>y term of (x - 3y)<sup>4</sup> is
+____?</p>
+<ol type="a">
+  <li>
+    <p align="left" style="margin-left: .75in">The first step is to find what
+    term we are looking for.&nbsp; Since the first term is x<sup>4</sup> and the
+    second term is x<sup>3</sup>y, etc, we can conclude we are looking for the 2<sup>nd</sup>
+    term.</li>
+  <li>
+    <p align="left" style="margin-left: .75in">Also, remember the term is going
+    to be negative since we are subtracting and the term we are looking for is
+    even.</li>
+  <li>
+    <p align="left" style="margin-left: .75in">Find C(4,2-1) or C(4,1) = 4.</li>
+  <li>
+    <p align="left" style="margin-left: .75in">Find 1<sup>4-(2-1)</sup> = 1<sup>3</sup>
+    = 1.</li>
+  <li>
+    <p align="left" style="margin-left: .75in">Find 3<sup>2-1</sup> = 3.</li>
+  <li>
+    <p align="left" style="margin-left: .75in">The answer is -[4 x 1 x 3] = -12</li>
+</ol>
+<p align="left" style="text-indent: -.25in; margin-left: .25in">Note: If a or b
+is 1, then you can ignore that step.&nbsp; In Ex [1] you can ignore step c, in
+Ex [2] you can ignore step d.</p>
+<p align="left" style="text-indent: -.25in; margin-left: .25in">&nbsp;</p>
+<p align="center"><a href="#top">Back to top</a></p>
+
+<!--mstheme--></font></body>
+
+</html>

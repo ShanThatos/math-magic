@@ -1,0 +1,129 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Math Magic - Working With Matrices</title>
+<STYLE TYPE="text/css">
+<!--
+A:hover {text-decoration: none; color="#FF4500"}
+--></STYLE>
+   <script LANGUAGE="JAVASCRIPT">
+      window.status = "Math-Magic.com: The #1 source on the Net for all your mental math needs!!!"
+   </script>
+<meta name="Microsoft Theme" content="sumipntg 011, default">
+</head>
+
+<body background="../_themes/sumipntg/sumtextb.jpg" bgcolor="#FFFFFF" text="#000066" link="#3333CC" vlink="#666699" alink="#990099"><!--mstheme--><font face="Verdana, Arial, Helvetica">
+
+<p align="center"><a name="top"></a><img border="0" src="../math_magic2.gif" width="105" height="77"><a name="top"><!--webbot
+bot="Navigation" S-Type="banner" S-Rendering S-Orientation B-Include-Home
+B-Include-Up U-Page S-Target startspan --><img src="_derived/matrices.htm_cmp_sumipntg010_bnr.gif" width="600" height="60" border="0" alt="Matrices"><!--webbot
+bot="Navigation" endspan i-checksum="27600" -->
+</a></p>
+<p align="center"><!--webbot bot="Navigation" S-Type="siblings"
+S-Orientation="horizontal" S-Rendering="graphics" B-Include-Home="TRUE"
+B-Include-Up="FALSE" U-Page S-Target startspan --><script language="JavaScript"><!--
+MSFPhover = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )) || 
+  ((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 ))); 
+function MSFPpreload(img) 
+{
+  var a=new Image(); a.src=img; return a; 
+}
+// --></script><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav1n=MSFPpreload("../_derived/home_cmp_sumipntg010_hbtn.gif"); MSFPnav1h=MSFPpreload("../_derived/home_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="../index.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src"><img src="../_derived/home_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Home" align="middle" name="MSFPnav1"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav2n=MSFPpreload("_derived/distance.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav2h=MSFPpreload("_derived/distance.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="distance.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2h.src" onmouseout="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2n.src"><img src="_derived/distance.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Distance" align="middle" name="MSFPnav2"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav3n=MSFPpreload("_derived/slope.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav3h=MSFPpreload("_derived/slope.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="slope.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3h.src" onmouseout="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3n.src"><img src="_derived/slope.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Slope" align="middle" name="MSFPnav3"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav4n=MSFPpreload("_derived/solve.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav4h=MSFPpreload("_derived/solve.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="solve.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4h.src" onmouseout="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4n.src"><img src="_derived/solve.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Solving Two Variables" align="middle" name="MSFPnav4"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav5n=MSFPpreload("_derived/imaginary.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav5h=MSFPpreload("_derived/imaginary.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="imaginary.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5h.src" onmouseout="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5n.src"><img src="_derived/imaginary.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Imaginary Numbers" align="middle" name="MSFPnav5"></a> <img src="_derived/matrices.htm_cmp_sumipntg010_hbtn_p.gif" width="140" height="40" border="0" alt="Matrices" align="middle"> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav6n=MSFPpreload("_derived/compound.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav6h=MSFPpreload("_derived/compound.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="compound.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6h.src" onmouseout="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6n.src"><img src="_derived/compound.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Compound Functions" align="middle" name="MSFPnav6"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav7n=MSFPpreload("_derived/inverse.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav7h=MSFPpreload("_derived/inverse.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="inverse.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7h.src" onmouseout="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7n.src"><img src="_derived/inverse.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Inverse Functions" align="middle" name="MSFPnav7"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav8n=MSFPpreload("_derived/parabola.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav8h=MSFPpreload("_derived/parabola.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="parabola.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8h.src" onmouseout="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8n.src"><img src="_derived/parabola.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Parabolas" align="middle" name="MSFPnav8"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav9n=MSFPpreload("_derived/mod.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav9h=MSFPpreload("_derived/mod.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="mod.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9h.src" onmouseout="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9n.src"><img src="_derived/mod.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Modular Math" align="middle" name="MSFPnav9"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav10n=MSFPpreload("_derived/vector.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav10h=MSFPpreload("_derived/vector.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="vector.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10h.src" onmouseout="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10n.src"><img src="_derived/vector.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Vectors" align="middle" name="MSFPnav10"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav11n=MSFPpreload("_derived/polar.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav11h=MSFPpreload("_derived/polar.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="polar.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav11'].src=MSFPnav11h.src" onmouseout="if(MSFPhover) document['MSFPnav11'].src=MSFPnav11n.src"><img src="_derived/polar.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Polar Coordinates" align="middle" name="MSFPnav11"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav12n=MSFPpreload("_derived/asymptote.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav12h=MSFPpreload("_derived/asymptote.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="asymptote.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav12'].src=MSFPnav12h.src" onmouseout="if(MSFPhover) document['MSFPnav12'].src=MSFPnav12n.src"><img src="_derived/asymptote.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Asymptotes" align="middle" name="MSFPnav12"></a><!--webbot bot="Navigation" endspan i-checksum="53682" -->
+</p>
+<p align="center">(*<a href="../pdf_files/algebra/matrices.pdf">View/Download .pdf
+file</a>*)</p>
+<h4 align="left"><!--mstheme--><font color="#003366">Working With Matrices:<!--mstheme--></font></h4>
+<p align="left" style="text-indent: -.25in; margin-left: .25in">A.&nbsp; Number
+Sense only deals with small matrices, usually 2 x 2 matrices.&nbsp; This page
+will look at 3 ways of manipulating matrices:&nbsp; Multiplying Matrices,
+Inverses, and Determinants.&nbsp;</p>
+<p align="left" style="text-indent: -.25in; margin-left: .25in">B.&nbsp;
+Multiplying Matrices</p>
+<p align="left" style="text-indent: -.25in; margin-left: .75in">1.&nbsp; Unlike
+general multiplication, matrix multiplication is not commutative.&nbsp; Multiplying
+A x B and B x A will give different results.</p>
+<p align="left" style="text-indent: -.25in; margin-left: .75in">2.&nbsp; The
+following will show how to multiply two 2x2 matrices:</p>
+<p align="center" style="text-indent: -.25in; margin-left: .25in"><img border="0" src="images/matric5.gif" width="360" height="51"></p>
+<p align="left" style="text-indent: -.25in; margin-left: 1.25in">a.&nbsp; In
+other words, you multiply the row of the matrix on the left with the column of
+the matrix on the right.</p>
+<p align="left" style="text-indent: -.25in; margin-left: 1.75in"><font size="4"><sup>Ex
+[1]</sup></font>&nbsp; <sub><img border="0" src="images/matric6.gif" width="192" height="48"></sub>,
+<font size="4"><sup>then d = _____?</sup></font></p>
+<p align="left" style="text-indent: -.25in; margin-left: 2in">a.&nbsp; Since we
+are looking for d, then we are only concerned with that spot.&nbsp; So d = 3(2)
++ 0(5) = 6.&nbsp; The answer is 6.</p>
+<p align="left" style="text-indent: -.25in; margin-left: 2in">b.&nbsp; Some
+people have a hard time knowing which row and column to multiply.&nbsp; This is
+how I usually think of it.&nbsp; If I were to put the two matrices on top of
+each other, which row from the first matrix and which column from the second
+matrix would they intersect on.&nbsp; In this example, it is the second row of
+the first matrix, and the second column of the second matrix.</p>
+<p align="left" style="text-indent: -.25in; margin-left: .75in">3.&nbsp; This
+method of multiplication can be expanded to matrices other that 2x2.&nbsp;
+However, due to space constraints, on a test, usually you will only see a 2x2
+matrix or smaller.</p>
+<p align="left" style="text-indent: -.25in; margin-left: .25in">C.&nbsp;
+Inverses</p>
+<p align="left" style="text-indent: -.25in; margin-left: .75in">1.&nbsp; In
+general, inverses are very difficult to compute.&nbsp; However, on 2x2 matrices,
+inverses are easy.</p>
+<p align="left" style="text-indent: -.25in; margin-left: .75in">2.&nbsp; For a
+2x2 matrix:</p>
+<p align="center" style="text-indent: -.25in; margin-left: .25in"><img border="0" src="images/matric7.gif" width="236" height="48"></p>
+<p align="left" style="text-indent: -.25in; margin-left: 1.25in"><font size="4"><sup>Ex
+[1]</sup></font>&nbsp; <sub><img border="0" src="images/matric8.gif" width="136" height="52"></sub>,
+<font size="4"><sup>then c = ____.</sup></font></p>
+<p align="left" style="text-indent: -.25in; margin-left: 1.5in">a.&nbsp;
+According to above, c = -4.&nbsp; The answer is -4.</p>
+<p align="left" style="text-indent: -.25in; margin-left: .25in">D.&nbsp;
+Determinants</p>
+<p align="left" style="text-indent: -.25in; margin-left: .75in">a.&nbsp; In
+linear algebra, determinants have many uses.&nbsp; Like with inverses, finding
+the determinants can prove difficult.&nbsp; However, on a 2x2 matrix,
+determinants are easy.</p>
+<p align="left" style="text-indent: -.25in; margin-left: .75in">b.&nbsp;
+Determinants are usually abbreviated &quot;det&quot;.&nbsp; So:</p>
+<p align="center" style="text-indent: -.25in; margin-left: .25in"><img border="0" src="images/matric9.gif" width="143" height="48"></p>
+<p align="left" style="text-indent: -.25in; margin-left: 1.25in"><font size="4"><sup>Ex
+[1]</sup></font>&nbsp; <sub><img border="0" src="images/matric10.gif" width="153" height="48"></sub></p>
+<p align="left" style="text-indent: -.25in; margin-left: 1.5in">a.&nbsp; The
+answer is 3(5)-(2)(-1) = 15+2 = 17.</p>
+<p align="left" style="text-indent: -.25in; margin-left: 1.5in">&nbsp;</p>
+<p align="center"><a href="#top">Back to top</a></p>
+
+<!--mstheme--></font></body>
+
+</html>

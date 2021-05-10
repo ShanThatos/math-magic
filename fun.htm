@@ -1,0 +1,440 @@
+<html>
+
+<head><script LANGUAGE="JAVASCRIPT">
+function lifetimer(){	         
+	today = new Date()          
+	BirthDay = new Date(document.live.age.value)         
+	timeold = (today.getTime() - BirthDay.getTime());  
+	msPerDay = 60 * 60 * 24 * 1000;
+	yearsold = Math.floor(timeold / msPerDay / 365.242199);
+	monthsold = Math.floor(timeold / msPerDay / 365.242199 * 12);
+	e_daysold = timeold / msPerDay;         
+	daysold = Math.floor(e_daysold);         
+	e_hrsold = (e_daysold)*24;         
+	hrsold = Math.floor(e_hrsold);      
+	e_minold = (e_hrsold * 60);   
+	minsold = Math.floor((e_hrsold)*60);
+	secondsold = Math.floor(e_minold*60);
+	document.live.time1.value = yearsold	         
+	document.live.time2.value = monthsold	         
+	document.live.time3.value = daysold	         
+	document.live.time4.value = hrsold
+	document.live.time5.value = minsold
+	document.live.time6.value = secondsold
+	timerID = setTimeout("lifetimer()",1000)   
+}        
+
+function weight (){
+     w1 = Math.floor (document.live2.WeightInput.value / .00220462262);
+     w2 = Math.floor (document.live2.WeightInput.value / (.00220462262)/25);
+     w3 = Math.round (16 * document.live2.WeightInput.value / 8.34);
+     w4 = Math.floor (document.live2.WeightInput.value / (.00220462262)/5.67);
+     money = w4 / 4;
+     w5 = Math.floor (document.live2.WeightInput.value / 2.20462262);
+     w6 = Math.floor (document.live2.WeightInput.value / .00220462262 / .001);
+     document.live2.Weight1.value = w1
+     document.live2.Weight2.value = w2
+     document.live2.Weight3.value = w3
+     document.live2.Weight4.value = w4
+     document.live2.money.value = money
+     document.live2.Weight5.value = w5
+     document.live2.Weight6.value = w6
+}
+
+function deathrateM(){	         
+	today = new Date()          
+	BirthDay = new Date(document.death.age.value)         
+	timeold = (today.getTime() - BirthDay.getTime());  
+	msPerDay = 60 * 60 * 24 * 1000;
+	yearsold = Math.floor(74 - timeold / msPerDay / 365.242199);
+	monthsold = Math.floor(74 *12 - timeold / msPerDay / 365.242199 * 12);
+	e_daysold = timeold / msPerDay;         
+	daysold = Math.floor(74*365.242199 - e_daysold);         
+	e_hrsold = (e_daysold)*24;         
+	hrsold = Math.floor(74*365.242199*24 - e_hrsold);      
+	e_minold = (e_hrsold * 60);   
+	minsold = Math.floor(74*365.242199*24*60 - (e_hrsold)*60);
+	secondsold = Math.floor(74*365.242199*24*3600 - e_minold*60);
+	document.death.time1.value = yearsold	         
+	document.death.time2.value = monthsold	         
+	document.death.time3.value = daysold	         
+	document.death.time4.value = hrsold
+	document.death.time5.value = minsold
+	document.death.time6.value = secondsold
+	timerID = setTimeout("deathrateM()",1000)   
+}        
+
+function deathrateF(){
+	today = new Date()          
+	BirthDay = new Date(document.death.age.value)         
+	timeold = (today.getTime() - BirthDay.getTime());  
+	msPerDay = 60 * 60 * 24 * 1000;
+	yearsold = Math.floor(79 - timeold / msPerDay / 365.242199);
+	monthsold = Math.floor(79 *12 - timeold / msPerDay / 365.242199 * 12);
+	e_daysold = timeold / msPerDay;         
+	daysold = Math.floor(79*365.242199 - e_daysold/365.242199*1);         
+	e_hrsold = (e_daysold)*24;         
+	hrsold = Math.floor(79*365.242199*24 - e_hrsold);      
+	e_minold = (e_hrsold * 60);   
+	minsold = Math.floor(79*365.242199*24*60 - (e_hrsold)*60);
+	secondsold = Math.floor(79*365.242199*24*3600 - e_minold*60);
+	document.death.time1.value = yearsold	         
+	document.death.time2.value = monthsold	         
+	document.death.time3.value = daysold	         
+	document.death.time4.value = hrsold
+	document.death.time5.value = minsold
+	document.death.time6.value = secondsold
+	timerID = setTimeout("deathrateF()",1000)   
+}        
+
+function distance(){
+   minutes = Math.floor(document.speed.min.value);
+   seconds = Math.floor(100*(document.speed.min.value - minutes));
+   miles_hour = 3600/(minutes*60+seconds);
+   equator = Math.round(24902 / miles_hour);
+   moon = Math.round(238900 / miles_hour);
+   sun = Math.round(92957100 / miles_hour);
+   la = Math.round(2868.1 / miles_hour);
+   texas = Math.round(877.4 / miles_hour);
+   document.speed.time1.value = equator
+   document.speed.time2.value = moon
+   document.speed.time3.value = sun
+   document.speed.time4.value = la
+   document.speed.time5.value = texas
+}
+
+function findsleep(){
+   today = new Date()
+   bdate = new Date(document.sleep.age.value);
+   timeold = today - bdate;
+   msPerDay = 60 * 60 * 24 * 1000;
+   daysold = timeold/msPerDay;
+   hrsSlept = daysold*document.sleep.sleepday.value;
+   years = Math.floor((hrsSlept / (365.242199*24) * 100))/100;
+   months = Math.floor((hrsSlept / (365.242199 * 24) * 12));
+   days = Math.floor(hrsSlept / 24);
+   hours = Math.floor(hrsSlept);
+   minutes = Math.floor(60*hrsSlept);
+   seconds = Math.floor(3600*hrsSlept);
+   document.sleep.time1.value = years;
+   document.sleep.time2.value = months;
+   document.sleep.time3.value = days;
+   document.sleep.time4.value = hours;
+   document.sleep.time5.value = minutes;
+   document.sleep.time6.value = seconds;   
+}   
+</script>
+
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+
+<title>Math Magic - Fun With Numbers</title>
+<STYLE TYPE="text/css">
+<!--
+A:hover {text-decoration: none; color="#FF4500"}
+--></STYLE>
+   <script LANGUAGE="JAVASCRIPT">
+      window.status = "Math-Magic.com: The #1 source on the Net for all your mental math needs!!!"
+   </script>
+
+<meta name="Microsoft Theme" content="sumipntg 011, default">
+</head>
+
+<body background="_themes/sumipntg/sumtextb.jpg" bgcolor="#FFFFFF" text="#000066" link="#3333CC" vlink="#666699" alink="#990099"><!--mstheme--><font face="Verdana, Arial, Helvetica">
+
+
+
+<h4 align="center"><!--mstheme--><font color="#003366"><a name="top"></a><img border="0" src="math_magic2.gif" width="91" height="65"><!--webbot
+bot="Navigation" S-Type="banner" S-Rendering="graphics" S-Orientation
+B-Include-Home B-Include-Up U-Page S-Target startspan --><img src="_derived/fun.htm_cmp_sumipntg010_bnr.gif" width="600" height="60" border="0" alt="Fun With Numbers"><!--webbot
+bot="Navigation" endspan i-checksum="27023" --><!--mstheme--></font></h4>
+
+
+
+<p align="center"><!--webbot bot="Navigation" S-Type="children"
+S-Orientation="horizontal" S-Rendering="graphics" B-Include-Home="TRUE"
+B-Include-Up="FALSE" U-Page S-Target startspan --><script language="JavaScript"><!--
+MSFPhover = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )) || 
+  ((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 ))); 
+function MSFPpreload(img) 
+{
+  var a=new Image(); a.src=img; return a; 
+}
+// --></script><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav1n=MSFPpreload("_derived/home_cmp_sumipntg010_hbtn.gif"); MSFPnav1h=MSFPpreload("_derived/home_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="index.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src"><img src="_derived/home_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Home" align="middle" name="MSFPnav1"></a><!--webbot bot="Navigation" endspan i-checksum="25359" -->
+</p>
+
+
+
+<p align="left">Here are a few fun little programs that will let you know just a
+little more about yourself that you never knew before!!!&nbsp; Enjoy!!
+</p>
+
+
+
+<p align="left"><a href="#old">How old am I?</a>
+</p>
+
+
+
+<p align="left"><a href="#weigh">How much do I weigh?</a>
+</p>
+
+
+
+<p align="left"><a href="#die">When can I expect to die?</a>
+</p>
+
+
+
+<p align="left"><a href="#run">How long will it take me to run?</a>
+</p>
+
+
+
+<p align="left"><a href="#sleep">How long have I been asleep?</a>
+</p>
+
+
+
+<p align="left">&nbsp;
+</p>
+
+
+
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">
+  <tr>
+    <td width="100%" bgcolor="#00FFFF"><!--mstheme--><font face="Verdana, Arial, Helvetica"><a name="old"></a>How old am I again???????????????<!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="Verdana, Arial, Helvetica">&nbsp;
+
+<form name="live">
+  <p align="left">Your birthday please:&nbsp;&nbsp;&nbsp;&nbsp; <input TYPE="text" NAME="age" VALUE SIZE="20" tabindex="1"> 
+  Example: (October
+  26,1978) or (10/26/78) <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input TYPE="button" NAME="start" tabindex="2" VALUE="Calculate"  ONCLICK="lifetimer(this.form)"> 
+  &nbsp; <br>
+  <br>
+  </p>
+
+  <!--mstheme--></font><table border="0">
+    <tr>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica">You are years old:&nbsp;&nbsp;<!--mstheme--></font></td>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time1" VALUE size="12" disabled>  <!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica">You are months old:&nbsp;<!--mstheme--></font></td>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time2" VALUE size="12" disabled>  <!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica">You are days old:<!--mstheme--></font></td>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time3" VALUE size="12" disabled>  <!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica">You are hours old:<!--mstheme--></font></td>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time4" VALUE size="12" disabled>  <!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica">You are minutes old:<!--mstheme--></font></td>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time5" VALUE size="12" disabled>  <!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica">You are seconds old:<!--mstheme--></font></td>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time6" VALUE size="12" disabled><!--mstheme--></font></td>
+    </tr>
+  </table><!--mstheme--><font face="Verdana, Arial, Helvetica">
+
+</form>
+
+<h4><!--mstheme--><font color="#003366">&nbsp;<!--mstheme--></font></h4>
+
+<p align="center"><a href="#top">Back to top</a></p>
+
+<!--msthemeseparator--><p align="center"><img src="_themes/sumipntg/sumhorsa.gif" width="600" height="10"></p>
+<p>
+&nbsp;<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">
+  <tr>
+    <td width="100%" bgcolor="#00FFFF"><!--mstheme--><font face="Verdana, Arial, Helvetica"><a name="weigh"></a>I weigh how much?????????????????????<!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="Verdana, Arial, Helvetica">&nbsp;
+<form name="live2">
+<p>Your weight please (In pounds):&nbsp;&nbsp; <input type="text" name="WeightInput" size="3" tabindex="2">&nbsp; Example: (180)<br>&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;
+  <input type="button" value="Calculate" name="B1" tabindex="4" onclick=weight("this.form")>
+&nbsp;
+<p>&nbsp;<p>Your weight is equivalent to <input type="text" name="Weight1" size="10" disabled> 
+dollars in $1 bills.</p>
+
+<p>Your weight is equivalent to <input type="text" name="Weight4" size="10" disabled> 
+quarters or $<input type="text" name="money" size="9" disabled>.</p>
+
+<p>Your weight is equivalent to <input type="text" name="Weight2" size="10" disabled> 
+pencils.</p>
+
+<p>Your weight is equivalent to <input type="text" name="Weight3" size="10" disabled> 
+cups of water.</p>
+
+<p>Your weight is equivalent to <input type="text" name="Weight5" size="10" disabled> 
+ standard bricks.</p>
+
+<p>Your weight is equivalent to <input type="text" name="Weight6" size="10" disabled> 
+ feathers.</p>
+
+</form>
+<p>&nbsp;</p>
+<p align="center"><a href="#top">Back to top</a></p>
+<!--msthemeseparator--><p align="center"><img src="_themes/sumipntg/sumhorsa.gif" width="600" height="10"></p>
+
+<h4><!--mstheme--><font color="#003366">&nbsp;<!--mstheme--></font></h4>
+
+
+
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">
+  <tr>
+    <td width="100%" bgcolor="#00FFFF"><!--mstheme--><font face="Verdana, Arial, Helvetica"><a name="die"></a>When am I expected to die??????? (According to average life expectancy rates)<!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="Verdana, Arial, Helvetica">&nbsp;
+<form name="death">
+  <p>Your birthday please:&nbsp;&nbsp;&nbsp;&nbsp; <input TYPE="text" NAME="age" VALUE SIZE="20" tabindex="5"> 
+  Example: (October 26,1978) or (10/26/78)
+  </p>
+  <p>
+  Are you:&nbsp; <input type="button" value="Male" name="B1" tabindex="6" onclick="deathrateM(this.form)"> <input type="button" value="Female" name="B2" tabindex="7" onclick = "deathrateF(this.form)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </p>
+
+  <!--mstheme--></font><table border="0">
+    <tr>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica">Years before you die:&nbsp;&nbsp; &nbsp;<!--mstheme--></font></td>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time1" VALUE size="12" disabled>  <!--mstheme--></font></td>
+    </tr>
+      <tr>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica">Months before you die:&nbsp;<!--mstheme--></font></td>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time2" VALUE size="12" disabled>  <!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica">Days before you die:&nbsp;&nbsp;&nbsp;&nbsp;<!--mstheme--></font></td>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time3" VALUE size="12" disabled>  <!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica">Hours before you die:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--mstheme--></font></td>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time4" VALUE size="12" disabled>  <!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica">Minutes before you die:<!--mstheme--></font></td>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time5" VALUE size="12" disabled>  <!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica">Seconds before you die:<!--mstheme--></font></td>
+      <td><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time6" VALUE size="12" disabled><!--mstheme--></font></td>
+    </tr>
+  </table><!--mstheme--><font face="Verdana, Arial, Helvetica">
+
+
+</form>
+<p>
+&nbsp;
+<p align="center">
+<a href="#top">Back to top</a>
+<!--msthemeseparator--><p align="center"><img src="_themes/sumipntg/sumhorsa.gif" width="600" height="10"></p>
+<p>
+&nbsp;<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">
+  <tr>
+    <td width="100%" bgcolor="#00FFFF"><!--mstheme--><font face="Verdana, Arial, Helvetica"><a name="run"></a>How long does it take???????<!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="Verdana, Arial, Helvetica">&nbsp;
+<form name="speed">
+<p>How fast can you run a mile? <input type="text" name="min" size="6" tabindex="8">  Example
+(8.30 means 8 minutes, 30 seconds)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" value="Calculate" name="fast" onclick="distance(this.form)" tabindex="9">
+<p>It would take you:&nbsp;<!--mstheme--></font><table border="0">
+    <tr>
+       <td><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time1" VALUE size ="12" disabled><!--mstheme--></font></td>
+       <td><!--mstheme--><font face="Verdana, Arial, Helvetica">Hours to run around the equator!!!<!--mstheme--></font></td>
+    </tr>
+    <tr>
+       <td><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time2" VALUE size ="12" disabled><!--mstheme--></font></td>
+       <td><!--mstheme--><font face="Verdana, Arial, Helvetica">Hours to run to the moon!!!<!--mstheme--></font></td>
+    </tr>
+    <tr>
+       <td><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time3" VALUE size ="12" disabled><!--mstheme--></font></td>
+       <td><!--mstheme--><font face="Verdana, Arial, Helvetica">Hours to run to the sun!!!<!--mstheme--></font></td>
+    </tr>
+    <tr>
+       <td><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time4" VALUE size ="12" disabled><!--mstheme--></font></td>
+       <td><!--mstheme--><font face="Verdana, Arial, Helvetica">Hours to run around from LA to NYC!!!<!--mstheme--></font></td>
+    </tr>
+    <tr>
+       <td><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time5" VALUE size ="12" disabled><!--mstheme--></font></td>
+       <td><!--mstheme--><font face="Verdana, Arial, Helvetica">Hours to run across the longest part of Texas!!!<!--mstheme--></font></td>
+    </tr>
+</table><!--mstheme--><font face="Verdana, Arial, Helvetica">
+</form>
+<p>&nbsp;</p>
+
+<p align="center"><a href="#top">Back to top</a></p>
+
+<!--msthemeseparator--><p align="center"><img src="_themes/sumipntg/sumhorsa.gif" width="600" height="10"></p>
+<p>&nbsp;</p>
+
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">
+  <tr>
+    <td width="100%" bgcolor="#00FFFF"><!--mstheme--><font face="Verdana, Arial, Helvetica"><a name="sleep"></a>How long have I been asleep???????<!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="Verdana, Arial, Helvetica">&nbsp;
+<form name="sleep">
+  <p>Your birthday please:&nbsp;&nbsp;&nbsp;&nbsp; <input TYPE="text" NAME="age" VALUE SIZE="20" tabindex="10"> 
+  Example: (October 26,1978) or (10/26/78)
+  </p>
+  <p>
+
+How many hours of sleep do you get on average per day?&nbsp; <input type="text" name="sleepday" size="6" value="8.2" tabindex="11">
+  <p align="center">
+
+<input type="button" value="Calculate" name="B1" onclick="findsleep(this.form)" tabindex="12">
+  <p>
+
+You have been asleep for:<!--mstheme--></font><table border="0" width="202">
+    <tr>
+      <td width="99"><!--mstheme--><font face="Verdana, Arial, Helvetica">Years:&nbsp;<!--mstheme--></font></td>
+      <td width="94"><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time1" VALUE size="12" disabled>  <!--mstheme--></font></td>
+    </tr>
+      <tr>
+      <td width="99"><!--mstheme--><font face="Verdana, Arial, Helvetica">Months:&nbsp;<!--mstheme--></font></td>
+      <td width="94"><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time2" VALUE size="12" disabled>  <!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td width="99"><!--mstheme--><font face="Verdana, Arial, Helvetica">Days:&nbsp;&nbsp;&nbsp;&nbsp;<!--mstheme--></font></td>
+      <td width="94"><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time3" VALUE size="12" disabled>  <!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td width="99"><!--mstheme--><font face="Verdana, Arial, Helvetica">Hours:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--mstheme--></font></td>
+      <td width="94"><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time4" VALUE size="12" disabled>  <!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td width="99"><!--mstheme--><font face="Verdana, Arial, Helvetica">Minutes:<!--mstheme--></font></td>
+      <td width="94"><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time5" VALUE size="12" disabled>  <!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td width="99"><!--mstheme--><font face="Verdana, Arial, Helvetica">Seconds:<!--mstheme--></font></td>
+      <td width="94"><!--mstheme--><font face="Verdana, Arial, Helvetica"><input TYPE="text" NAME="time6" VALUE size="12" disabled><!--mstheme--></font></td>
+    </tr>
+  </table><!--mstheme--><font face="Verdana, Arial, Helvetica">
+
+</form>
+  <p>
+
+&nbsp;
+  <p align="center">
+
+<a href="#top">Back to top</a>
+<!--mstheme--></font></body>

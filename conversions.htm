@@ -1,0 +1,1052 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<STYLE>
+A:hover {color:red; text-decoration:none }
+</STYLE>
+<title>Math Magic - Basic Conversions</title>
+
+<script LANGUAGE="JAVASCRIPT">
+function popup ()
+{
+   flag = document.trick.flag.value;
+   if (window.event.srcElement.value == flag){
+      document.trick.output.value = document.trick.amount.value;
+      document.trick.flag2.value = flag}
+   else if (flag == ""){
+      document.trick.output.value = document.trick.amount.value;
+      document.trick.flag2.value = window.event.srcElement.value}
+   else if (window.event.srcElement.value == "Oranges"){
+      alert('Did you really think you could compare apples to oranges??? GET REAL!!!!')}
+   else {
+      alert ('Did you really think you could compare oranges to apples??? GET REAL!!!!')}
+}
+
+function findtemp ()
+{
+   f=0; c=0; k=0;
+   flag = document.temp.flag.value;
+   if (flag == "Fahrenheit"){
+      f = document.temp.amount.value; 
+      c = (f - 32)/1.8;
+      k = -1*(-1*c-273.15); }
+   else if (flag == "Celsius"){
+      c = document.temp.amount.value;
+      f = -1*(-1*c*1.8 - 32);
+      k = -(-1*c-273.15); }
+   else if (flag == "Kelvin"){
+      k = document.temp.amount.value;
+      c = k - 273.15;
+      f = -1*(c*1.8 - 32);}
+   if (window.event.srcElement.id == "a1"){
+      document.temp.output.value = f}   
+   else if (window.event.srcElement.id == "a2"){
+      document.temp.output.value = c}   
+   else if (window.event.srcElement.id == "a3"){
+      document.temp.output.value = k}
+   document.temp.amount2.value = document.temp.amount.value  
+   document.temp.flag2.value = window.event.srcElement.value
+}
+
+function findweight ()
+{
+   mg = 0; grams = 0; kg = 0; oz = 0;
+   lbs = 0; stons = 0; ltons = 0;
+   flag = document.weight.flag.value;
+   if (flag == "Milligrams"){
+      mg = document.weight.amount.value; grams=mg/1000; kg=grams/1000;
+      oz=grams/28.3495231; lbs=oz/16; stons=lbs/2000; ltons=lbs/2240;  }
+   else if (flag == "Grams"){
+      grams = document.weight.amount.value; mg=grams*1000; kg=grams/1000;
+      oz=grams/28.3495231; lbs=oz/16; stons=lbs/2000; ltons=lbs/2240;  }
+   else if (flag == "Kilograms"){
+      kg = document.weight.amount.value; grams=kg*1000; mg=grams*1000;
+      oz=grams/28.3495231; lbs=oz/16; stons=lbs/2000; ltons=lbs/2240;  }
+   else if (flag == "Ounces"){
+      oz = document.weight.amount.value; lbs=oz/16; stons=lbs/2000; ltons=lbs/2240;
+      grams=oz*28.2495231;mg=grams*1000; kg=grams/1000;  }
+   else if (flag == "Pounds"){
+      lbs = document.weight.amount.value; oz=lbs*16; stons=lbs/2000; ltons=lbs/2240;
+      grams=oz*28.2495231;mg=grams*1000; kg=grams/1000;  }
+   else if (flag == "Short tons"){
+      stons = document.weight.amount.value; lbs=stons*2000; oz=lbs*16; ltons=lbs/2240;
+      grams=oz*28.2495231;mg=grams*1000; kg=grams/1000;  }
+   else if (flag == "Long tons"){
+      ltons = document.weight.amount.value; lbs=ltons*2240; stons=lbs/2000; oz=lbs*16;
+      grams=oz*28.2495231;mg=grams*1000; kg=grams/1000;  }
+   if (window.event.srcElement.id == "a1"){
+      document.weight.output.value = mg}   
+   else if (window.event.srcElement.id == "a2"){
+      document.weight.output.value = grams}   
+   else if (window.event.srcElement.id == "a3"){
+      document.weight.output.value = kg}   
+   else if (window.event.srcElement.id == "a4"){
+      document.weight.output.value = oz}   
+   else if (window.event.srcElement.id == "a5"){
+      document.weight.output.value = lbs}   
+   else if (window.event.srcElement.id == "a6"){
+      document.weight.output.value = stons}   
+   else if (window.event.srcElement.id == "a7"){
+      document.weight.output.value = ltons}
+   document.weight.amount2.value = document.weight.amount.value  
+   document.weight.flag2.value = window.event.srcElement.value
+}
+
+   
+function findtime()
+{
+   sec = 0; min = 0; hr = 0; days = 0; week = 0;
+   month = 0; yr = 0; decade = 0; cent = 0; mill = 0;
+   flag = document.time.flag.value;
+   if (flag == "Seconds"){
+      sec = document.time.amount.value; min=sec/60; hr= min/60; days=hr/24;
+      week=days/7; yr = days/365.242199; month=yr*12; decade=yr/10; cent=yr/100; mill=yr/1000; }
+   else if (flag == "Minutes"){
+      min = document.time.amount.value; sec=min*60; hr= min/60; days=hr/24;
+      week=days/7; yr = days/365.242199; month=yr*12; decade=yr/10; cent=yr/100; mill=yr/1000; }
+   else if (flag == "Hours"){
+      hr = document.time.amount.value; min=hr*60; sec=min*60; days=hr/24;
+      week=days/7; yr = days/365.242199; month=yr*12; decade=yr/10; cent=yr/100; mill=yr/1000; }
+   else if (flag == "days") {
+      days = document.time.amount.value; hr=days*24; min=hr*60; sec=min*60;
+      week=days/7; yr = days/365.242199; month=yr*12; decade=yr/10; cent=yr/100; mill=yr/1000; }
+   else if (flag == "Weeks") {
+      week = document.time.amount.value; days=week*7; hr=days*24; min=hr*60; sec=min*60;
+      yr = days/365.242199; month=yr*12; decade=yr/10; cent=yr/100; mill=yr/1000; }
+   else if (flag == "Months") {
+      month = document.time.amount.value; yr=month/12; days=yr*365.242199; week=days/7; 
+      hr=days*24; min=hr*60; sec=min*60; decade=yr/10; cent=yr/100; mill=yr/1000; }
+   else if (flag == "Years") {
+      yr = document.time.amount.value; month=yr*12; days=yr*365.242199; week=days/7; 
+      hr=days*24; min=hr*60; sec=min*60; decade=yr/10; cent=yr/100; mill=yr/1000; }
+   else if (flag == "Decades") {
+      decade = document.time.amount.value; yr=decade*10; month=yr*12; days=yr*365.242199; week=days/7; 
+      hr=days*24; min=hr*60; sec=min*60; cent=yr/100; mill=yr/1000; }
+   else if (flag == "Centuries") {
+      cent = document.time.amount.value;  yr=cent*100; month=yr*12; days=yr*365.242199; week=days/7; 
+      hr=days*24; min=hr*60; sec=min*60; decade=yr/10; mill=yr/1000; }
+   else if (flag == "Millenia") {
+      mill = document.time.amount.value; yr=mill*1000; month=yr*12; days=yr*365.242199; week=days/7; 
+      hr=days*24; min=hr*60; sec=min*60; decade=yr/10; cent=yr/100;  }
+   if (window.event.srcElement.id == "s1"){
+      document.time.output.value = sec}   
+   else if (window.event.srcElement.id == "s2"){
+      document.time.output.value = min}   
+   else if (window.event.srcElement.id == "s3"){
+      document.time.output.value = hr}   
+   else if (window.event.srcElement.id == "s4"){
+      document.time.output.value = days}   
+   else if (window.event.srcElement.id == "s5"){
+      document.time.output.value = week}   
+   else if (window.event.srcElement.id == "s6"){
+      document.time.output.value = month}   
+   else if (window.event.srcElement.id == "s7"){
+      document.time.output.value = yr}   
+   else if (window.event.srcElement.id == "s8"){
+      document.time.output.value = decade}
+   else if (window.event.srcElement.id == "s9"){
+      document.time.output.value = cent}
+   else if (window.event.srcElement.id == "s10"){
+      document.time.output.value = mill}
+   document.time.flag2.value = window.event.srcElement.value
+   document.time.amount1.value = document.time.amount.value
+}
+
+function findarea()
+{
+   cm = 0; m = 0; km = 0; acre = 0; 
+   inch = 0; ft = 0; yd = 0; mile = 0;
+   flag = document.area.flag.value;
+   if (flag == "Square centimeters"){
+      cm = document.area.amount.value; m=cm/100/100; km=m/1000/1000; 
+      inch = cm/2.54/2.54; ft = inch/12/12; yd = ft/3/3; mile = yd/1760/1760; acre=mile*640  }
+   else if (flag == "Square meters")
+   {
+      m = document.area.amount.value; cm=m*100*100; km=m/1000/1000; 
+      inch = cm/2.54/2.54; ft = inch/12/12; yd = ft/3/3; mile = yd/1760/1760;acre=mile*640;
+      }
+   else if (flag == "Square kilometers"){
+      km = document.area.amount.value; m=km*1000*1000; cm=m*100*100; km=m/1000/1000; 
+      inch = cm/2.54/2.54; ft = inch/12/12; yd = ft/3/3; mile = yd/1760/1760; acre=mile*640;}
+   else if (flag == "Acres"){
+      acre = document.area.amount.value; mile=acre/640; yd=mile*1760*1760; ft=yd*3*3; inch=ft*12*12;
+      cm = inch*2.54*2.54; m = cm/100/100; km=m/1000/1000;}
+   else if (flag == "Square inches"){
+      inch = document.area.amount.value; ft = inch/12/12; yd = ft/3/3; mile = yd/1760/1760;
+      cm = inch*2.54*2.54; m=cm/100/100; km=m/1000/1000; acre=mile*640;}
+   else if (flag == "Square feet"){
+      ft = document.area.amount.value; inch=ft*12*12; yd = ft/3/3; mile = yd/1760/1760;
+      cm = inch*2.54*2.54; m=cm/100/100; km=m/1000/1000; acre=mile*640;}
+   else if (flag == "Square yards"){
+      yd = document.area.amount.value; ft = yd*3*3; inch = ft*12*12; mile = yd/1760/1760;
+      cm = inch*2.54*2.54; m=cm/100/100; km=m/1000/1000; acre=mile*640;}
+   else if (flag == "Square miles"){
+      mile = document.area.amount.value; yd = mile*1760*1760; ft = yd*3*3; inch = ft*12*12;
+      cm = inch*2.54*2.54; m=cm/100/100; km=m/1000/1000; acre=mile*640;}
+   if (window.event.srcElement.id == "a1"){
+      document.area.output.value = cm}   
+   else if (window.event.srcElement.id == "a2"){
+      document.area.output.value = m}   
+   else if (window.event.srcElement.id == "a3"){
+      document.area.output.value = km}   
+   else if (window.event.srcElement.id == "a4"){
+      document.area.output.value = acre}   
+   else if (window.event.srcElement.id == "a5"){
+      document.area.output.value = inch}   
+   else if (window.event.srcElement.id == "a6"){
+      document.area.output.value = ft}   
+   else if (window.event.srcElement.id == "a7"){
+      document.area.output.value = yd}   
+   else if (window.event.srcElement.id == "a8"){
+      document.area.output.value = mile}
+   document.area.flag2.value = window.event.srcElement.value
+   document.area.amount2.value = document.area.amount.value
+}
+
+function findspeed()
+{
+   meters = 0; meterm = 0; meterh = 0; kilos = 0; kilom = 0; kiloh = 0;
+   feets = 0; feetm = 0; feeth = 0; miles = 0; milem = 0; mileh = 0;
+   flag = document.speed.flag.value;
+   if (flag == "meters/sec"){
+      meters = document.speed.amount.value; meterm = meters*60; meterh = meterm*60;
+      kilos = meters/1000; kilom = kilos*60; kiloh = kilom*60;
+      feets = meters/.3048; feetm = feets*60; feeth = feetm*60;
+      miles = feets/5280; milem = miles*60; mileh = milem*60;}
+   else if (flag == "meters/min"){
+      meterm = document.speed.amount.value; meters = meterm/60; meterh = meterm*60;
+      kilos = meters/1000; kilom = kilos*60; kiloh = kilom*60;
+      feets = meters/.3048; feetm = feets*60; feeth = feetm*60;
+      miles = feets/5280; milem = miles*60; mileh = milem*60;}
+   else if (flag == "meters/hour"){
+      meterh = document.speed.amount.value; meterm = meterh/60; meters = meterm/60;
+      kilos = meters/1000; kilom = kilos*60; kiloh = kilom*60;
+      feets = meters/.3048; feetm = feets*60; feeth = feetm*60;
+      miles = feets/5280; milem = miles*60; mileh = milem*60;}
+   else if (flag == "kilometers/sec"){
+      kilos = document.speed.amount.value; kilom = kilos*60; kiloh = kilom*60;
+      meters = kilos/1000; meterm=meters*60; meterh = meterm*60;
+      feets = meters/.3048; feetm = feets*60; feeth = feetm*60;
+      miles = feets/5280; milem = miles*60; mileh = milem*60;}
+   else if (flag == "kilometers/min"){
+      kilom = document.speed.amount.value; kilos = kilom/60; kiloh = kilom*60;
+      meters = kilos*1000; meterm=meters*60; meterh = meterm*60;
+      feets = meters/.3048; feetm = feets*60; feeth = feetm*60;
+      miles = feets/5280; milem = miles*60; mileh = milem*60;}
+   else if (flag == "kilometers/hour"){
+      kiloh = document.speed.amount.value; kilom = kiloh/60; kilos = kilom/60;
+      meters = kilos*1000; meterm=meters*60; meterh = meterm*60;
+      feets = meters/.3048; feetm = feets*60; feeth = feetm*60;
+      miles = feets/5280; milem = miles*60; mileh = milem*60;}
+   else if (flag == "feet/sec"){
+      feets = document.speed.amount.value; feetm = feets*60; feeth = feetm*60;
+      meters = feets*.3048; meterm = meters*60; meterh = meterm *60;
+      kilos = meters/1000; kilom = kilos*60; kiloh = kilom*60;
+      miles = feets/5280; milem = miles*60; mileh = milem*60;}
+   else if (flag == "feet/min"){
+      feetm = document.speed.amount.value; feets = feetm/60; feeth = feetm*60;
+      meters = feets*.3048; meterm = meters*60; meterh = meterm *60;
+      kilos = meters/1000; kilom = kilos*60; kiloh = kilom*60;
+      miles = feets/5280; milem = miles*60; mileh = milem*60;}
+   else if (flag == "feet/hour"){
+      feeth = document.speed.amount.value; feetm = feeth/60; feets = feetm/60;
+      meters = feets*.3048; meterm = meters*60; meterh = meterm *60;
+      kilos = meters/1000; kilom = kilos*60; kiloh = kilom*60;
+      miles = feets/5280; milem = miles*60; mileh = milem*60;}
+   else if (flag == "miles/sec"){
+      miles = document.speed.amount.value; milem = miles*60; mileh = milem*60;
+      feets = miles*5280; feetm = feets*60; feeth = feetm*60;
+      meters = feets*.3048; meterm= meters*60; meterh = meterm*60;
+      kilos = meters/1000; kilom = kilos*60; kiloh = kilom*60;}
+   else if (flag == "miles/min"){
+      milem = document.speed.amount.value; miles = milem/60; mileh = milem*60;
+      feets = miles*5280; feetm = feets*60; feeth = feetm*60;
+      meters = feets*.3048; meterm= meters*60; meterh = meterm*60;
+      kilos = meters/1000; kilom = kilos*60; kiloh = kilom*60;}
+   else if (flag == "miles/hour"){
+      mileh = document.speed.amount.value; milem = mileh/60; miles = milem/60;
+      feets = miles*5280; feetm = feets*60; feeth = feetm*60;
+      meters = feets*.3048; meterm= meters*60; meterh = meterm*60;
+      kilos = meters/1000; kilom = kilos*60; kiloh = kilom*60;}
+   if (window.event.srcElement.id == "b1"){
+      document.speed.output.value = meters}
+   else if (window.event.srcElement.id == "b2"){
+      document.speed.output.value = meterm}
+   else if (window.event.srcElement.id == "b3"){
+      document.speed.output.value = meterh   }
+   else if (window.event.srcElement.id == "b4")   {
+      document.speed.output.value = kilos   }
+   else if (window.event.srcElement.id == "b5")   {
+      document.speed.output.value = kilom   }
+   else if (window.event.srcElement.id == "b6")   {
+      document.speed.output.value = kiloh   }
+   else if (window.event.srcElement.id == "b7")   {
+      document.speed.output.value = feets   }
+   else if (window.event.srcElement.id == "b8")   {
+      document.speed.output.value = feetm   }
+   else if (window.event.srcElement.id == "b9")   {
+      document.speed.output.value = feeth   }
+   else if (window.event.srcElement.id == "b10")   {
+      document.speed.output.value = miles   }
+   else if (window.event.srcElement.id == "b11")   {
+      document.speed.output.value = milem   }
+   else if (window.event.srcElement.id == "b12")   {
+      document.speed.output.value = mileh   }
+   else   {
+      document.speed.output.value = 0   }
+   document.speed.flag2.value = window.event.srcElement.value
+   document.speed.amount2.value = document.speed.amount.value
+}
+
+function findvolume()
+{
+   ml = 0;   tsp = 0;   tbl = 0;   oz = 0;   cup = 0;   liter = 0;
+   pint = 0;   qrt = 0;   gal = 0;   cin = 0;   bush = 0;   peck = 0;   cft = 0;
+   flag = document.volume.flag.value;
+   if (flag == "Milliliters")   {
+      ml = document.volume.amount.value;      l = ml/1000;
+      tsp = ml*.202884135;      tbl = tsp/3;
+      cup = tbl/16;      oz = cup*8;
+      pint = cup/2;      qrt = pint/2;
+      gal = qrt/4;      cin = gal*231;
+      bush = gal*.107420871;      peck = gal*.429683483;
+      cft = gal*.133680556;   }
+   else if (flag == "Liters")   {
+      liter = document.volume.amount.value;      ml = liter * 1000;
+      tsp = ml*.202884135;      tbl = tsp/3;
+      cup = tbl/16;      oz = cup*8;
+      pint = cup/2;      qrt = pint/2;
+      gal = qrt/4;      cin = gal*231;      
+      bush = gal*.107420871;      peck = gal*.429683483;
+      cft = gal*.133680556;   }
+   else if (flag == "Teaspoons")   {
+      tsp = document.volume.amount.value;      ml = tsp/.202884135;
+      liter = ml/1000;      tbl = tsp/3;
+      cup = tbl/16;      oz = cup*8;
+      pint = cup/2;      qrt = pint/2;
+      gal = qrt/4;      cin = gal*231;
+      bush = gal*.107420871;      peck = gal*.429683483;
+      cft = gal*.133680556;   }
+   else if (flag == "Tablespoons")   {
+      tbl = document.volume.amount.value;      tsp = tbl*3;
+      ml = tsp/.202884135;      liter = ml/1000;
+      cup = tbl/16;      oz = cup*8;
+      pint = cup/2;      qrt = pint/2;
+      gal = qrt/4;      cin = gal*231;
+      bush = gal*.107420871;      peck = gal*.429683483;
+      cft = gal*.133680556;   }
+   else if (flag == "Cups")   {
+      cup = document.volume.amount.value;      tbl = cup*16;
+      tsp = tbl*3;      ml = tsp/.202884135;
+      liter = ml/1000;      oz = cup*8;
+      pint = cup/2;      qrt = pint/2;
+      gal = qrt/4;      cin = gal*231;
+      bush = gal*.107420871;      peck = gal*.429683483;
+      cft = gal*.133680556;   }
+   else if (flag == "Ounces")   {
+      oz = document.volume.amount.value;      cup = oz/8;
+      tbl = cup*16;      tsp = tbl*3;
+      ml = tsp/.202884135;      liter = ml/1000;
+      pint = cup/2;      qrt = pint/2;
+      gal = qrt/4;      cin = gal*231;
+      bush = gal*.107420871;      peck = gal*.429683483;
+      cft = gal*.133680556;   }
+   else if (flag == "Pints")   {
+      pint = document.volume.amount.value;      cup = pint*2;
+      oz = cup*8;      tbl = cup*16;
+      tsp = tbl*3;      ml = tsp/.202884135;
+      liter = ml/1000;      qrt = pint/2;
+      gal = qrt/4;      cin = gal*231;
+      bush = gal*.107420871;      peck = gal*.429683483;
+      cft = gal*.133680556;   }
+   else if (flag == "Quarts")   {
+      qrt = document.volume.amount.value;      pint = 2*qrt;
+      cup = 2*pint;      oz = cup*8;
+      tbl = cup*16;      tsp = tbl*3;
+      ml = tsp/.202884135;      liter = ml/1000;
+      gal = qrt/4;      cin = gal*231;
+      bush = gal*.107420871;      peck = gal*.429683483;
+      cft = gal*.133680556;   }
+   else if (flag == "Gallons")   {
+      gal = document.volume.amount.value;      qrt = gal*4;
+      pint = 2*qrt;      cup = 2*pint;
+      oz = cup*8;      tbl = cup*16;
+      tsp = tbl*3;      ml = tsp/.202884135;
+      liter = ml/1000;      cin = gal*231;
+      bush = gal*.107420871;      peck = gal*.429683483;
+      cft = gal*.133680556;   }
+   else if (flag == "Cubic Inches")   {
+      cin = document.volume.amount.value;      gal = cin/231;
+      qrt = gal*4;      pint = 2*qrt;
+      cup = 2*pint;      oz = cup*8;
+      tbl = cup*16;      tsp = tbl*3;
+      ml = tsp/.202884135;      liter = ml/1000;
+      bush = gal*.107420871;      peck = gal*.429683483;
+      cft = gal*.133680556;   }
+   else if (flag == "Bushels")   {
+      bush = document.volume.amount.value;      gal = bush/.107420871;
+      cin = gal*231;      qrt = gal*4;
+      pint = 2*qrt;      cup = 2*pint;
+      oz = cup*8;      tbl = cup*16;
+      tsp = tbl*3;      ml = tsp/.202884135;
+      liter = ml/1000;      peck = gal*.429683483;
+      cft = gal*.133680556;   }
+   else if (flag == "Pecks")   {
+      peck = document.volume.amount.value;      gal = peck/.429683483;
+      cin = gal*231;      qrt = gal*4;
+      pint = 2*qrt;      cup = 2*pint;
+      oz = cup*8;      tbl = cup*16;
+      tsp = tbl*3;      ml = tsp/.202884135;
+      liter = ml/1000;      bush = gal*.107420871;
+      cft = gal*.133680556;   }
+   else if (flag == "Cubic Feet")   {
+      cft = document.volume.amount.value;      gal = cft/.133680556;
+      cin = gal*231;      qrt = gal*4;
+      pint = 2*qrt;      cup = 2*pint;
+      oz = cup*8;      tbl = cup*16;
+      tsp = tbl*3;      ml = tsp/.202884135;
+      liter = ml/1000;      bush = gal*.107420871;
+      peck = gal*.429683483;   }
+   if (window.event.srcElement.id == "w1")   {
+      document.volume.output.value = ml   }
+   else if (window.event.srcElement.id == "w2")   {
+      document.volume.output.value = tsp   }
+   else if (window.event.srcElement.id == "w3")   {
+      document.volume.output.value = tbl   }
+   else if (window.event.srcElement.id == "w4")   {
+      document.volume.output.value = oz   }
+   else if (window.event.srcElement.id == "w5")   {
+      document.volume.output.value = cup   }
+   else if (window.event.srcElement.id == "w6")   {
+      document.volume.output.value = liter   }
+   else if (window.event.srcElement.id == "w7")   {
+      document.volume.output.value = pint   }
+   else if (window.event.srcElement.id == "w8")   {
+      document.volume.output.value = qrt   }
+   else if (window.event.srcElement.id == "w9")   {
+      document.volume.output.value = gal   }
+   else if (window.event.srcElement.id == "w10")   {
+      document.volume.output.value = cin   }
+   else if (window.event.srcElement.id == "w11")   {
+      document.volume.output.value = bush   }
+   else if (window.event.srcElement.id == "w12")   {
+      document.volume.output.value = peck   }
+   else if (window.event.srcElement.id == "w13")   {
+      document.volume.output.value = cft   }
+   else   {
+      document.volume.output.value = 0   }
+   document.volume.flag2.value = window.event.srcElement.value
+   document.volume.amount2.value = document.volume.amount.value
+}
+
+   
+      
+function finddistance()
+{
+   cm = 0;   m = 0;   km = 0;   inch = 0;   ft = 0;   yd = 0;
+   miles = 0;   fathoms = 0;   rods = 0;   nmiles = 0;
+   flag = document.distance.flag.value;
+   if (flag == "Centimeters")   {
+      cm = document.distance.amount.value;      m = cm/100;
+      km = m/1000;      inch = cm/2.54;
+      ft = inch/12;      yd = ft/3;     
+      fathoms = yd/2;      rod = ft/16.5;
+      miles = yd/1760;      nmiles = miles/1.15077945;   }
+   else if (flag == "Meters")   {
+      m = document.distance.amount.value;      cm = m*100;
+      km = m/1000;      inch = cm/2.54;
+      ft = inch/12;      yd = ft/3;
+      fathoms = yd/2;      rod = ft/16.5;
+      miles = yd/1760;      nmiles = miles/1.15077945;   }
+   else if (flag == "Kilometers")   {
+      km = document.distance.amount.value;      m = km*1000;
+      cm = m*100;      inch = cm/2.54;
+      ft = inch/12;      yd = ft/3;
+      fathoms = yd/2;      rod = ft/16.5;
+      miles = yd/1760;      nmiles = miles/1.15077945;   }
+   else if (flag == "Inches")   {
+      inch = document.distance.amount.value;      cm = inch*2.54;
+      m = cm/100;      km = m/1000;
+      ft = inch/12;      yd = ft/3;
+      fathoms = yd/2;      rod=ft/16.5;
+      miles = yd/1760;      nmiles = miles/1.15077945;   }
+   else if (flag == "Feet")   {
+      ft = document.distance.amount.value;      inch = ft*12;
+      cm = inch*2.54;      m = cm/100;
+      km = m/1000;      yd = ft/3;
+      fathoms = yd/2;      rod = ft/16.5;
+      miles = yd/1760;      nmiles = miles/1.15077945;   }
+   else if (flag == "Yards")   {
+      yd = document.distance.amount.value;      miles = yd/1760;
+      ft = yd*3;      fathoms = yd/2;
+      rod = ft/16.5;      inch = ft*12;
+      cm = inch*2.54;      m = cm/100;
+      km = m/1000;       nmiles = miles/1.15077945;   }
+   else if (flag == "Fathoms")   {
+      fathoms = document.distance.amount.value;      yd = fathoms*2;
+      ft = yd*3;      rod = ft/16.5;
+      inch = ft *12;      cm = inch * 2.54;
+      m = cm/100;      km = m/1000;
+      miles = yd/1760;      nmiles = miles/1.15077945;   }
+   else if (flag == "Rods")   {
+      rod = document.distance.amount.value;      ft = rod*16.5;
+      yd = ft/3;      inch = ft*12;
+      fathoms = yd/2;      miles = yd/1760;
+      cm = inch * 2.54;      m = cm/100;
+      km = m/1000;      nmiles = miles/1.15077945;   }
+   else if (flag == "Miles")   {
+      miles = document.distance.amount.value;      yd = miles * 1760;
+      ft = yd*3;      inch = ft*12;
+      fathoms = yd/2;      rod = ft/16.5;
+      cm = inch*2.54;      m = cm/100;
+      km = m/1000;      nmiles = miles/1.15077945;   }
+   else if (flag == "Nautical Miles")   {
+      nmiles = document.distance.amount.value;      miles = nmiles*1.15077945;
+      yd = miles * 1760;      ft = yd*3;
+      inch = ft*12;      cm = inch*2.54;
+      m = cm/100;      km = m/1000;
+      rod = ft/16.5;      fathoms = yd/2;   }
+   if (window.event.srcElement.id == "s1")   {
+      document.distance.output.value = cm    }
+   else if (window.event.srcElement.id == "s2")   {
+      document.distance.output.value = m   }
+   else if (window.event.srcElement.id == "s3")   {
+      document.distance.output.value = km   }
+   else if (window.event.srcElement.id == "s4")   {
+      document.distance.output.value = inch   }
+   else if (window.event.srcElement.id == "s5")   {
+      document.distance.output.value = ft   }
+   else if (window.event.srcElement.id == "s6")   {
+      document.distance.output.value = yd   }
+   else if (window.event.srcElement.id == "s7")   {
+      document.distance.output.value = miles   }
+   else if (window.event.srcElement.id == "s8")   {
+      document.distance.output.value = fathoms   }
+   else if (window.event.srcElement.id == "s9")   {
+      document.distance.output.value = rod   }
+   else if (window.event.srcElement.id == "s10")   {
+      document.distance.output.value = nmiles   }
+   else   {
+      document.distance.output.value = 0   }
+   document.distance.t1.value = window.event.srcElement.value
+   document.distance.amount1.value = document.distance.amount.value
+}
+      
+function setid()
+{
+   flag = window.event.srcElement.value
+   document.distance.flag.value = flag
+   document.distance.t1.value = ""
+   document.distance.output.value = ""
+   document.distance.amount1.value = document.distance.amount.value
+}      
+ 
+function setid2()
+{
+   flag = window.event.srcElement.value
+   document.volume.flag.value = flag
+   document.volume.amount2.value = document.volume.amount.value
+   document.volume.output.value = ""
+   document.volume.flag2.value = ""
+}
+function setid3()
+{
+   flag = window.event.srcElement.value
+   document.speed.flag.value = flag
+   document.speed.amount2.value = document.speed.amount.value
+   document.speed.output.value = ""
+   document.speed.flag2.value = ""
+}
+function setid4()
+{
+   flag = window.event.srcElement.value
+   document.area.flag.value = flag
+   document.area.amount2.value = document.area.amount.value
+   document.area.flag2.value = ""
+   document.area.output.value = ""
+}
+
+function setid5()
+{
+   flag = window.event.srcElement.value
+   document.time.flag.value = flag
+   document.time.amount1.value = document.time.amount.value
+   document.time.flag2.value = ""
+   document.time.output.value = ""
+}
+
+function setid6()
+{
+   flag = window.event.srcElement.value
+   document.weight.flag.value = flag
+   document.weight.amount2.value = document.weight.amount.value
+   document.weight.flag2.value = ""
+   document.weight.output.value = ""
+}
+
+function setid7()
+{
+   flag = window.event.srcElement.value
+   document.temp.flag.value = flag
+   document.temp.amount2.value = document.temp.amount.value
+   document.temp.flag2.value = ""
+   document.temp.output.value = ""
+}
+
+function setid8 ()
+{
+   flag = window.event.srcElement.value
+   document.trick.flag.value = flag
+   document.trick.amount2.value = document.trick.amount.value
+   document.trick.flag2.value = ""
+   document.trick.output.value = ""
+}
+
+</script>
+<meta name="Microsoft Theme" content="sumipntg 011, default">
+</head>
+
+<body background="_themes/sumipntg/sumtextb.jpg" bgcolor="#FFFFFF" text="#000066" link="#3333CC" vlink="#666699" alink="#990099"><!--mstheme--><font face="宋体">
+   <script LANGUAGE="JAVASCRIPT">
+      window.status = "Math-Magic.com: The #1 source on the Net for all your mental math needs!!!"
+   </script>
+    <p align="center"><a name="top"></a><img border="0" src="math_magic2.gif" width="113" height="82"><!--webbot
+    bot="Navigation" S-Type="banner" S-Rendering="graphics" S-Orientation
+    B-Include-Home B-Include-Up U-Page S-Target startspan --><img src="_derived/conversions.htm_cmp_sumipntg010_bnr.gif" width="600" height="60" border="0" alt="Basic Conversions"><!--webbot
+    bot="Navigation" endspan i-checksum="4110" -->
+   </p>  
+    <p align="center"><!--webbot bot="Navigation" S-Type="children"
+    S-Orientation="horizontal" S-Rendering="graphics" B-Include-Home="TRUE"
+    B-Include-Up="FALSE" U-Page S-Target startspan --><script language="JavaScript"><!--
+MSFPhover = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )) || 
+  ((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 ))); 
+function MSFPpreload(img) 
+{
+  var a=new Image(); a.src=img; return a; 
+}
+// --></script><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav1n=MSFPpreload("_derived/home_cmp_sumipntg010_hbtn.gif"); MSFPnav1h=MSFPpreload("_derived/home_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="index.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src"><img src="_derived/home_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Home" align="middle" name="MSFPnav1"></a><!--webbot bot="Navigation" endspan i-checksum="25359" -->
+   </p>  
+    <p align="center">Below, you will find various conversion charts.  To find a specific conversion, enter in the input value, click on a measurement from List #1, then click on a measurement from List #2.</p>         
+    <div align="center">        
+      <center>        
+      <!--mstheme--></font><table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="59%" id="AutoNumber1">        
+        <tr>        
+          <td width="38%"><!--mstheme--><font face="宋体">　<!--mstheme--></font></td> 
+          <td width="30%"><!--mstheme--><font face="宋体">　<!--mstheme--></font></td> 
+          <td width="32%"><!--mstheme--><font face="宋体">　<!--mstheme--></font></td> 
+        </tr> 
+        <tr> 
+          <td width="38%"><!--mstheme--><font face="宋体"><a href="#distance">Distance Conversions</a><!--mstheme--></font></td>        
+          <td width="30%"><!--mstheme--><font face="宋体"><a href="#volume">Volume Conversions</a><!--mstheme--></font></td>        
+          <td width="32%"><!--mstheme--><font face="宋体"><a href="#speed">Speed Conversions</a><!--mstheme--></font></td>        
+        </tr>        
+        <tr>        
+          <td width="38%"><!--mstheme--><font face="宋体">　<!--mstheme--></font></td>
+          <td width="30%"><!--mstheme--><font face="宋体">　<!--mstheme--></font></td>
+          <td width="32%"><!--mstheme--><font face="宋体">　<!--mstheme--></font></td>
+        </tr>
+        <tr>
+          <td width="38%"><!--mstheme--><font face="宋体"><a href="#area">Area Conversions</a><!--mstheme--></font></td>        
+          <td width="30%"><!--mstheme--><font face="宋体"><a href="#time">Time Conversions</a><!--mstheme--></font></td>        
+          <td width="32%"><!--mstheme--><font face="宋体"><a href="#weight">Weight Conversions</a><!--mstheme--></font></td>        
+        </tr>        
+        <tr>        
+          <td width="38%"><!--mstheme--><font face="宋体">　<!--mstheme--></font></td>
+          <td width="30%"><!--mstheme--><font face="宋体">　<!--mstheme--></font></td>
+          <td width="32%"><!--mstheme--><font face="宋体">　<!--mstheme--></font></td>
+        </tr>
+        <tr>
+          <td width="38%"><!--mstheme--><font face="宋体"><a href="#temp">Temperature Conversions</a><!--mstheme--></font></td>        
+          <td width="30%"><!--mstheme--><font face="宋体"><a href="#fruit">Fruit Conversions</a><!--mstheme--></font></td>        
+          <td width="32%"><!--mstheme--><font face="宋体">　<!--mstheme--></font></td>
+        </tr>
+      </table><!--mstheme--><font face="宋体">
+      </center>
+   </div>
+    <p align="left">　</p> 
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0"> 
+      <tr> 
+        <td width="100%" bgcolor="#00FFFF"><!--mstheme--><font face="宋体"><a name="distance"></a>Distance Conversions<!--mstheme--></font></td>                     
+      </tr>                     
+    </table><!--mstheme--><font face="宋体">                     
+    <br>                     
+   <form name="distance">                     
+      Input value: <input type="text" name="amount" size="12" value="1">　<br>
+      <br>
+      Distance Conversion List #1<br>                             
+      <!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">                            
+        <tr>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Centimeters" id="r1" onclick="setid()">Centimeters&nbsp;<!--mstheme--></font></td>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Meters" onclick="setid()">Meters<!--mstheme--></font></td>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Kilometers" onclick="setid()">Kilometers&nbsp;<!--mstheme--></font></td>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Inches" onclick="setid()">Inches&nbsp;&nbsp;<!--mstheme--></font></td>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Feet" onclick="setid()">Feet<!--mstheme--></font></td>                            
+        </tr>                            
+        <tr>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Yards" onclick="setid()">Yards&nbsp;<!--mstheme--></font></td>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Fathoms" onclick="setid()">Fathoms<!--mstheme--></font></td>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Rods" onclick="setid()">Rods<!--mstheme--></font></td>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Miles" onclick="setid()">Miles<!--mstheme--></font></td>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Nautical Miles" onclick="setid()">Nautical                              
+      Miles<!--mstheme--></font></td>                             
+        </tr>                             
+      </table><!--mstheme--><font face="宋体">                             
+      <br>Distance Conversion List #2<br>                            
+      <!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">                           
+        <tr>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Centimeters" onclick="finddistance(this.form)" id="s1">Centimeters&nbsp;<!--mstheme--></font></td>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Meters" onclick="finddistance(this.form)" id="s2">Meters&nbsp;&nbsp;<!--mstheme--></font></td>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Kilometers" onclick="finddistance(this.form)" id="s3">Kilometers&nbsp;<!--mstheme--></font></td>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Inches" onclick="finddistance(this.form)" id="s4">Inches&nbsp;<!--mstheme--></font></td>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Feet" onclick="finddistance(this.form)" id="s5">Feet<!--mstheme--></font></td>                           
+        </tr>                           
+        <tr>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Yards" onclick="finddistance(this.form)" id="s6">Yards&nbsp;<!--mstheme--></font></td>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Fathoms" onclick="finddistance(this.form)" id="s8">Fathoms<!--mstheme--></font></td>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Rods" onclick="finddistance(this.form)" id="s9">Rods<!--mstheme--></font></td>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Miles" onclick="finddistance(this.form)" id="s7">Miles&nbsp;<!--mstheme--></font></td>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Nautical Miles" onclick="finddistance(this.form)" id="s10">Nautical                              
+      Miles&nbsp;<!--mstheme--></font></td>                            
+        </tr>                            
+      </table><!--mstheme--><font face="宋体">                            
+     <p align="left"> <input type="text" name="amount1" size="12" value=" "><input type="text" name="flag" size="12" disabled="true">                              
+     = <input type="text" name="output" size="22"><input type="text" name="t1" size="12" disabled="true"></p>                             
+   </form>                             
+                             
+    <p align="left">　</p>   
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">  
+      <tr>  
+        <td width="100%" bgcolor="#00FFFF"><!--mstheme--><font face="宋体"><a name="volume"></a>Volume Conversions<!--mstheme--></font></td>                    
+      </tr>                    
+    </table><!--mstheme--><font face="宋体"><br>                    
+   <form name="volume">                    
+                       
+   <p align="left">                    
+      Input value: <input type="text" name="amount" size="12" value="1"></p>                          
+   <p align="left">Volume Conversion List #1</p>                         
+                            
+   <!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">                        
+    <tr>                        
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert3" value="Milliliters" id="v1" onclick="setid2()">Milliliters<!--mstheme--></font></td>                        
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert3" value="Teaspoons" id="v2" onclick="setid2()">Teaspoons<!--mstheme--></font></td>                        
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert3" value="Tablespoons" id="v3" onclick="setid2()">Tablespoons<!--mstheme--></font></td>                        
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert3" value="Ounces" id="v4" onclick="setid2()">Ounces<!--mstheme--></font></td>                        
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert3" value="Cups" id="v5" onclick="setid2()">Cups<!--mstheme--></font></td>                        
+    </tr>                        
+    <tr>                  
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert3" value="Liters" id="v6" onclick="setid2()">Liters<!--mstheme--></font></td>                       
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert3" value="Pints" id="v7" onclick="setid2()">Pints<!--mstheme--></font></td>                       
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert3" value="Quarts" id="v8" onclick="setid2()">Quarts<!--mstheme--></font></td>                       
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert3" value="Gallons" id="v9" onclick="setid2()">Gallons<!--mstheme--></font></td>                       
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert3" value="Cubic Inches" id="v10" onclick="setid2()">Cubic Inches<!--mstheme--></font></td>                        
+    </tr>                  
+    <tr>                        
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert3" value="Bushels" id="v11" onclick="setid2()">Bushels<!--mstheme--></font></td>                      
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert3" value="Pecks" id="v12" onclick="setid2()">Pecks<!--mstheme--></font></td>                      
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert3" value="Cubic Feet" id="v13" onclick="setid2()">Cubic Feet<!--mstheme--></font></td>                      
+      <td width="20%"><!--mstheme--><font face="宋体">　<!--mstheme--></font></td>     
+      <td width="20%"><!--mstheme--><font face="宋体">　<!--mstheme--></font></td>      
+    </tr>      
+   </table><!--mstheme--><font face="宋体"><br>Volume Conversion List #2<br>                       
+   <!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">                       
+     <tr>                       
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert4" value="Milliliters" id="w1" onclick="findvolume(this.form)">Milliliters<!--mstheme--></font></td>                        
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert4" value="Teaspoons" id="w2" onclick="findvolume(this.form)">Teaspoons<!--mstheme--></font></td>                        
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert4" value="Tablespoons" id="w3" onclick="findvolume(this.form)">Tablespoons<!--mstheme--></font></td>                        
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert4" value="Ounces" id="w4" onclick="findvolume(this.form)">Ounces<!--mstheme--></font></td>                        
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert4" value="Cups" id="w5" onclick="findvolume(this.form)">Cups<!--mstheme--></font></td>                        
+    </tr>                        
+     <tr>                  
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert4" value="Liters" id="w6" onclick="findvolume(this.form)">Liters<!--mstheme--></font></td>                       
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert4" value="Pints" id="w7" onclick="findvolume(this.form)">Pints<!--mstheme--></font></td>                       
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert4" value="Quarts" id="w8" onclick="findvolume(this.form)">Quarts<!--mstheme--></font></td>                       
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert4" value="Gallons" id="w9" onclick="findvolume(this.form)">Gallons<!--mstheme--></font></td>                       
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert4" value="Cubic Inches" id="w10" onclick="findvolume(this.form)">Cubic Inches<!--mstheme--></font></td>                        
+     </tr>                  
+    <tr>                        
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert4" value="Bushels" id="w11" onclick="findvolume(this.form)">Bushels<!--mstheme--></font></td>                      
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert4" value="Pecks" id="w12" onclick="findvolume(this.form)">Pecks<!--mstheme--></font></td>                      
+      <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert4" value="Cubic Feet" id="w13" onclick="findvolume(this.form)">Cubic Feet<!--mstheme--></font></td>                      
+      <td width="20%"><!--mstheme--><font face="宋体">　<!--mstheme--></font></td>     
+      <td width="20%"><!--mstheme--><font face="宋体">　<!--mstheme--></font></td>      
+    </tr>        
+   </table><!--mstheme--><font face="宋体">     
+    <br><input type="text" name="amount2" size="12"><input type="text" name="flag" size="12" disabled>    
+   = <input type="text" name="output" size="22"><input type="text" name="flag2" size="12" disabled>                     
+                         
+   </form>                        
+   <p align="left">　</p>   
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">  
+      <tr>  
+        <td width="100%" bgcolor="#00FFFF"><!--mstheme--><font face="宋体"><a name="speed"></a>Speed Conversions<!--mstheme--></font></td>                   
+      </tr>                   
+    </table><!--mstheme--><font face="宋体"><br>                   
+   <form name="speed">                   
+                      
+   <p align="left">                   
+      Input value: <input type="text" name="amount" size="12" value="60"></p>                         
+   <p align="left">Speed Conversion List #1</p>                         
+                            
+   <!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">                        
+    <tr>                        
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed1" value="meters/sec" id="a1" onclick="setid3()">meters/sec<!--mstheme--></font></td>                       
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed1" value="kilometers/sec" id="a4" onclick="setid3()">kilometers/sec<!--mstheme--></font></td>                       
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed1" value="feet/sec" id="a7" onclick="setid3()">feet/sec<!--mstheme--></font></td>                       
+      <td width="26%"><!--mstheme--><font face="宋体"><input type="radio" name="speed1" value="miles/sec" id="a10" onclick="setid3()">miles/sec<!--mstheme--></font></td>                       
+    </tr>                       
+    <tr>                 
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed1" value="meters/min" id="a2" onclick="setid3()">meters/min<!--mstheme--></font></td>                      
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed1" value="kilometers/min" id="a5" onclick="setid3()">kilometers/min<!--mstheme--></font></td>                      
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed1" value="feet/min" id="a8" onclick="setid3()">feet/min<!--mstheme--></font></td>                      
+      <td width="26%"><!--mstheme--><font face="宋体"><input type="radio" name="speed1" value="miles/min" id="a11" onclick="setid3()">miles/min<!--mstheme--></font></td>                      
+    </tr>                 
+    <tr>                       
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed1" value="meters/hour" id="a2" onclick="setid3()">meters/hour<!--mstheme--></font></td>                     
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed1" value="kilometers/hour" id="a6" onclick="setid3()">kilometers/hour<!--mstheme--></font></td>                     
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed1" value="feet/hour" id="a9" onclick="setid3()">feet/hour<!--mstheme--></font></td>                     
+      <td width="26%"><!--mstheme--><font face="宋体"><input type="radio" name="speed1" value="miles/hour" id="a12" onclick="setid3()">miles/hour<!--mstheme--></font></td>                     
+    </tr>                      
+   </table><!--mstheme--><font face="宋体"><br>Speed Conversion List #2<br>                       
+   <!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">                       
+     <tr>                 
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed2" value="meters/sec" id="b1" onclick="findspeed(this.form)">meters/sec<!--mstheme--></font></td>                       
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed2" value="kilometers/sec" id="b4" onclick="findspeed(this.form)">kilometers/sec<!--mstheme--></font></td>                       
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed2" value="feet/sec" id="b7" onclick="findspeed(this.form)">feet/sec<!--mstheme--></font></td>                       
+      <td width="26%"><!--mstheme--><font face="宋体"><input type="radio" name="speed2" value="miles/sec" id="b10" onclick="findspeed(this.form)">miles/sec<!--mstheme--></font></td>                       
+     </tr>                
+     <tr>                
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed2" value="meters/min" id="b2" onclick="findspeed(this.form)">meters/min<!--mstheme--></font></td>                      
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed2" value="kilometers/min" id="b5" onclick="findspeed(this.form)">kilometers/min<!--mstheme--></font></td>                      
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed2" value="feet/min" id="b8" onclick="findspeed(this.form)">feet/min<!--mstheme--></font></td>                      
+      <td width="26%"><!--mstheme--><font face="宋体"><input type="radio" name="speed2" value="miles/min" id="b11" onclick="findspeed(this.form)">miles/min<!--mstheme--></font></td>                      
+     </tr>                
+     <tr>                
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed2" value="meters/hour" id="b3" onclick="findspeed(this.form)">meters/hour<!--mstheme--></font></td>                     
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed2" value="kilometers/hour" id="b6" onclick="findspeed(this.form)">kilometers/hour<!--mstheme--></font></td>                     
+      <td width="25%"><!--mstheme--><font face="宋体"><input type="radio" name="speed2" value="feet/hour" id="b9" onclick="findspeed(this.form)">feet/hour<!--mstheme--></font></td>                     
+      <td width="26%"><!--mstheme--><font face="宋体"><input type="radio" name="speed2" value="miles/hour" id="b12" onclick="findspeed(this.form)">miles/hour<!--mstheme--></font></td>                     
+     </tr>                
+   </table><!--mstheme--><font face="宋体">                     
+    <br><input type="text" name="amount2" size="12"><b><input type="text" name="flag" size="20" disabled>                    
+   </b> = <input type="text" name="output" size="22"><b><input type="text" name="flag2" size="20" disabled>                     
+   </b>                               
+   </form>                  
+    <p>　</p> 
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">
+      <tr>
+        <td width="100%" bgcolor="#00FFFF"><!--mstheme--><font face="宋体"><a name="area"></a>Area Conversions<!--mstheme--></font></td>          
+      </tr>          
+    </table><!--mstheme--><font face="宋体">　<br> 
+     
+<form name ="area">     
+              
+<p>Input Value: <input type="text" name="amount" size="12" value="1">&nbsp;&nbsp(*Note: 1 section is equal to 1 square mile*)</p>              
+<br>Area Conversion List #1<br>              
+                       
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">             
+  <tr>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "area1" value = "Square centimeters" onclick="setid4()">Square centimeters<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "area1" value = "Square meters" onclick="setid4()">Square meters<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "area1" value = "Square kilometers" onclick="setid4()">Square kilometers<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "area1" value = "Acres" onclick="setid4()">Acres<!--mstheme--></font></td>             
+  </tr>             
+  <tr>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "area1" value = "Square inches" onclick="setid4()">Square inches<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "area1" value = "Square feet" onclick="setid4()">Square feet<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "area1" value = "Square yards" onclick="setid4()">Square yards<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "area1" value = "Square miles" onclick="setid4()">Square miles<!--mstheme--></font></td>             
+  </tr>             
+</table><!--mstheme--><font face="宋体"><br><br>             
+Area Conversion List #2<br>             
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">             
+  <tr>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "area2" value = "Square centimeters" id="a1" onclick="findarea(this.form)">Square centimeters<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "area2" value = "Square meters" id="a2" onclick="findarea(this.form)">Square meters<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "area2" value = "Square kilometers" id="a3" onclick="findarea(this.form)">Square kilometers<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "area2" value = "Acres" id="a4" onclick="findarea(this.form)">Acres<!--mstheme--></font></td>             
+  </tr>             
+  <tr>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "area2" value = "Square inches" id="a5" onclick="findarea(this.form)">Square inches<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "area2" value = "Square feet" id="a6" onclick="findarea(this.form)">Square feet<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "area2" value = "Square yards" id="a7" onclick="findarea(this.form)">Square yards<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "area2" value = "Square miles" id="a8" onclick="findarea(this.form)">Square miles<!--mstheme--></font></td>             
+  </tr>             
+</table><!--mstheme--><font face="宋体">               
+    <br><input type="text" name="amount2" size="12"><b><input type="text" name="flag" size="20" disabled>                    
+   </b> = <input type="text" name="output" size="22"><b><input type="text" name="flag2" size="20" disabled>                     
+   </b>                               
+</form>                 
+   <p>　</p>
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0"> 
+      <tr> 
+        <td width="100%" bgcolor="#00FFFF"><!--mstheme--><font face="宋体"><a name="time"></a>Time Conversions<!--mstheme--></font></td>                     
+      </tr>                     
+    </table><!--mstheme--><font face="宋体">                     
+    <br>                     
+   <form name="time">                     
+      Input value: <input type="text" name="amount" size="12" value="1">　<br>
+      <br>
+      Time Conversion List #1<br>                             
+      <!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">                            
+        <tr>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Seconds" id="r1" onclick="setid5()">Seconds&nbsp;<!--mstheme--></font></td>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Minutes" onclick="setid5()">Minutes<!--mstheme--></font></td>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Hours" onclick="setid5()">Hours&nbsp;<!--mstheme--></font></td>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Days" onclick="setid5()">Days&nbsp;&nbsp;<!--mstheme--></font></td>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Weeks" onclick="setid5()">Weeks<!--mstheme--></font></td>                            
+        </tr>                            
+        <tr>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Months" onclick="setid5()">Months&nbsp;<!--mstheme--></font></td>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Years" onclick="setid5()">Years<!--mstheme--></font></td>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Decades" onclick="setid5()">Decades<!--mstheme--></font></td>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Centuries" onclick="setid5()">Centuries<!--mstheme--></font></td>                            
+          <td width="20%" align="left"><!--mstheme--><font face="宋体"><input type="radio" name="convert" Value="Millenia" onclick="setid5()">Millenia<!--mstheme--></font></td>                             
+        </tr>                             
+      </table><!--mstheme--><font face="宋体">                             
+      <br>Time Conversion List #2<br>                            
+      <!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">                           
+        <tr>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Seconds" onclick="findtime(this.form)" id="s1">Seconds&nbsp;<!--mstheme--></font></td>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Minutes" onclick="findtime(this.form)" id="s2">Minutes&nbsp;&nbsp;<!--mstheme--></font></td>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Hours" onclick="findtime(this.form)" id="s3">Hours&nbsp;<!--mstheme--></font></td>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Days" onclick="findtime(this.form)" id="s4">Days&nbsp;<!--mstheme--></font></td>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Weeks" onclick="findtime(this.form)" id="s5">Weeks<!--mstheme--></font></td>                           
+        </tr>                           
+        <tr>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Months" onclick="findtime(this.form)" id="s6">Months&nbsp;<!--mstheme--></font></td>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Years" onclick="findtime(this.form)" id="s7">Years<!--mstheme--></font></td>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Decades" onclick="findtime(this.form)" id="s8">Decades<!--mstheme--></font></td>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Centuries" onclick="findtime(this.form)" id="s9">Centuries&nbsp;<!--mstheme--></font></td>                           
+          <td width="20%"><!--mstheme--><font face="宋体"><input type="radio" name="convert2" Value="Millenia" onclick="findtime(this.form)" id="s10">Millenia<!--mstheme--></font></td>                            
+        </tr>                            
+      </table><!--mstheme--><font face="宋体">                            
+     <p align="left"> <input type="text" name="amount1" size="12" value=" "><input type="text" name="flag" size="12" disabled="true">                              
+     = <input type="text" name="output" size="22"><input type="text" name="flag2" size="12" disabled="true"></p>                             
+   </form>                  
+    <p>　</p> 
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">
+      <tr>
+        <td width="100%" bgcolor="#00FFFF"><!--mstheme--><font face="宋体"><a name="weight"></a>Weight Conversions<!--mstheme--></font></td>          
+      </tr>          
+    </table><!--mstheme--><font face="宋体">　<br> 
+     
+<form name ="weight">     
+              
+<p>Input Value: <input type="text" name="amount" size="12" value="1"></p>              
+<br>Weight Conversion List #1<br>              
+                       
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">             
+  <tr>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "weight1" value = "Milligrams" onclick="setid6()">Milligrams<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "weight1" value = "Grams" onclick="setid6()">Grams<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "weight1" value = "Kilograms" onclick="setid6()">Kilograms<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "weight1" value = "Ounces" onclick="setid6()">Ounces<!--mstheme--></font></td>             
+  </tr>             
+  <tr>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "weight1" value = "Pounds" onclick="setid6()">Pounds<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "weight1" value = "Short tons" onclick="setid6()">Short tons<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "weight1" value = "Long tons" onclick="setid6()">Long tons<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体">　<!--mstheme--></font></td>       
+  </tr>       
+</table><!--mstheme--><font face="宋体"><br><br>       
+Weight Conversion List #2<br>             
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">             
+  <tr>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "weight2" value = "Milligrams" id="a1" onclick="findweight(this.form)">Milligrams<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "weight2" value = "Grams" id="a2" onclick="findweight(this.form)">Grams<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "weight2" value = "Kilograms" id="a3" onclick="findweight(this.form)">Kilograms<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "weight2" value = "Ounces" id="a4" onclick="findweight(this.form)">Ounces<!--mstheme--></font></td>             
+  </tr>             
+  <tr>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "weight2" value = "Pounds" id="a5" onclick="findweight(this.form)">Pounds<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "weight2" value = "Short tons" id="a6" onclick="findweight(this.form)">Short tons<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体"><input type ="radio" name = "weight2" value = "Long tons" id="a7" onclick="findweight(this.form)">Long tons<!--mstheme--></font></td>             
+    <td width="25%"><!--mstheme--><font face="宋体">　<!--mstheme--></font></td>       
+  </tr>       
+</table><!--mstheme--><font face="宋体">         
+    <br><input type="text" name="amount2" size="12"><b><input type="text" name="flag" size="20" disabled>              
+   </b> = <input type="text" name="output" size="22"><b><input type="text" name="flag2" size="20" disabled>                     
+   </b>                               
+</form>                  
+    <p>　</p> 
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">
+      <tr>
+        <td width="100%" bgcolor="#00FFFF"><!--mstheme--><font face="宋体"><a name="temp"></a>Temperature Conversions<!--mstheme--></font></td>          
+      </tr>          
+    </table><!--mstheme--><font face="宋体">　<br> 
+     
+<form name ="temp">     
+              
+<p>Input Value (in degrees):         
+<input type="text" name="amount" size="12" value="0"></p>              
+<br>Temperature Conversion List #1<br>              
+                       
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">             
+  <tr>             
+    <td width="33%"><!--mstheme--><font face="宋体"><input type ="radio" name = "temp1" value = "Fahrenheit" onclick="setid7()">Fahrenheit<!--mstheme--></font></td>             
+    <td width="33%"><!--mstheme--><font face="宋体"><input type ="radio" name = "temp1" value = "Celsius" onclick="setid7()">Celsius<!--mstheme--></font></td>             
+    <td width="34%"><!--mstheme--><font face="宋体"><input type ="radio" name = "temp1" value = "Kelvin" onclick="setid7()">Kelvin<!--mstheme--></font></td>             
+  </tr>              
+</table><!--mstheme--><font face="宋体"><br><br>             
+Temperature Conversion List #2<br>             
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">             
+  <tr>             
+    <td width="33%"><!--mstheme--><font face="宋体"><input type ="radio" name = "temp2" value = "Fahrenheit" id="a1" onclick="findtemp(this.form)">Fahrenheit<!--mstheme--></font></td>             
+    <td width="33%"><!--mstheme--><font face="宋体"><input type ="radio" name = "temp2" value = "Celsius" id="a2" onclick="findtemp(this.form)">Celsius<!--mstheme--></font></td>             
+    <td width="34%"><!--mstheme--><font face="宋体"><input type ="radio" name = "temp2" value = "Kelvin" id="a3" onclick="findtemp(this.form)">Kelvin<!--mstheme--></font></td>             
+  </tr>             
+</table><!--mstheme--><font face="宋体">               
+    <br><input type="text" name="amount2" size="12"><b><input type="text" name="flag" size="20" disabled>                    
+   </b> = <input type="text" name="output" size="22"><b><input type="text" name="flag2" size="20" disabled>                     
+   </b>                               
+</form>             
+                 
+    <p>　</p> 
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">
+      <tr>
+        <td width="100%" bgcolor="#00FFFF"><!--mstheme--><font face="宋体"><a name="fruit"></a>Fruit Conversions<!--mstheme--></font></td>          
+      </tr>          
+    </table><!--mstheme--><font face="宋体">　<br> 
+     
+<form name ="trick">     
+              
+<p>Input Value: <input type="text" name="amount" size="12" value="1000"></p>             
+<br>Fruit Conversion List #1<br>             
+                      
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">            
+  <tr>            
+    <td width="50%"><!--mstheme--><font face="宋体"><input type ="radio" name = "temp1" value = "Apples" onclick="setid8()">Apples<!--mstheme--></font></td>            
+    <td width="50%"><!--mstheme--><font face="宋体"><input type ="radio" name = "temp1" value = "Oranges" onclick="setid8()">Oranges<!--mstheme--></font></td>            
+  </tr>             
+</table><!--mstheme--><font face="宋体"><br><br>            
+Fruit Conversion List #2<br>            
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#003366" bordercolorlight="#C0C0C0">            
+  <tr>            
+    <td width="50%"><!--mstheme--><font face="宋体"><input type ="radio" name = "temp2" value = "Apples" id="a1" onclick="popup()">Apples<!--mstheme--></font></td>            
+    <td width="50%"><!--mstheme--><font face="宋体"><input type ="radio" name = "temp2" value = "Oranges" id="a2" onclick="popup()">Oranges<!--mstheme--></font></td>            
+  </tr>            
+</table><!--mstheme--><font face="宋体">              
+    <br><input type="text" name="amount2" size="12"><b><input type="text" name="flag" size="20" disabled>                   
+   </b> = <input type="text" name="output" size="22"><b><input type="text" name="flag2" size="20" disabled>                    
+   </b>                              
+</form>         
+                            
+    <p>　</p>
+   <p>These programs were written by me and are untested.&nbsp; If you find an        
+   error, PLEASE let me know at: <a href="mailto:webmaster@math-magic.com">       
+   webmaster@math-magic.com</a></p>       
+   <p>　</p>
+   <p align="center"><a href="#top">Back to top</a></p>       
+                            
+<!--mstheme--></font></body>                     
+                     
+</html>

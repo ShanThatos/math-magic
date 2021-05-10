@@ -1,0 +1,130 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Math Magic - Approximating Multiplying 2 Large Numbers</title>
+<STYLE TYPE="text/css">
+<!--
+A:hover {text-decoration: none; color="#FF4500"}
+--></STYLE>
+   <script LANGUAGE="JAVASCRIPT">
+      window.status = "Math-Magic.com: The #1 source on the Net for all your mental math needs!!!"
+   </script>
+
+<meta name="Microsoft Theme" content="sumipntg 011, default">
+</head>
+
+<body background="../_themes/sumipntg/sumtextb.jpg" bgcolor="#FFFFFF" text="#000066" link="#3333CC" vlink="#666699" alink="#990099"><!--mstheme--><font face="Verdana, Arial, Helvetica">
+
+<p align="center"><a name="top"></a><img border="0" src="../math_magic2.gif" width="113" height="83"><!--webbot
+bot="Navigation" S-Type="banner" S-Rendering="graphics" S-Orientation
+B-Include-Home B-Include-Up U-Page S-Target startspan --><img src="_derived/multiply_2nums.htm_cmp_sumipntg010_bnr.gif" width="600" height="60" border="0" alt="Multiplying 2 Numbers"><!--webbot
+bot="Navigation" endspan i-checksum="27362" -->
+</p>
+<p align="center"><!--webbot bot="Navigation" S-Type="siblings"
+S-Orientation="horizontal" S-Rendering="graphics" B-Include-Home="TRUE"
+B-Include-Up="FALSE" U-Page S-Target startspan --><script language="JavaScript"><!--
+MSFPhover = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )) || 
+  ((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 ))); 
+function MSFPpreload(img) 
+{
+  var a=new Image(); a.src=img; return a; 
+}
+// --></script><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav1n=MSFPpreload("../_derived/home_cmp_sumipntg010_hbtn.gif"); MSFPnav1h=MSFPpreload("../_derived/home_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="../index.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src"><img src="../_derived/home_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Home" align="middle" name="MSFPnav1"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav2n=MSFPpreload("_derived/add_series.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav2h=MSFPpreload("_derived/add_series.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="add_series.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2h.src" onmouseout="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2n.src"><img src="_derived/add_series.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Adding A Series" align="middle" name="MSFPnav2"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav3n=MSFPpreload("_derived/square_roots.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav3h=MSFPpreload("_derived/square_roots.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="square_roots.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3h.src" onmouseout="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3n.src"><img src="_derived/square_roots.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Square Roots" align="middle" name="MSFPnav3"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav4n=MSFPpreload("_derived/cube_roots.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav4h=MSFPpreload("_derived/cube_roots.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="cube_roots.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4h.src" onmouseout="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4n.src"><img src="_derived/cube_roots.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Cube Roots" align="middle" name="MSFPnav4"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav5n=MSFPpreload("_derived/e.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav5h=MSFPpreload("_derived/e.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="e.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5h.src" onmouseout="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5n.src"><img src="_derived/e.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Powers Of e" align="middle" name="MSFPnav5"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav6n=MSFPpreload("_derived/pi.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav6h=MSFPpreload("_derived/pi.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="pi.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6h.src" onmouseout="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6n.src"><img src="_derived/pi.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Powers Of Pi" align="middle" name="MSFPnav6"></a> <img src="_derived/multiply_2nums.htm_cmp_sumipntg010_hbtn_p.gif" width="140" height="40" border="0" alt="Multiplying 2 Numbers" align="middle"> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav7n=MSFPpreload("_derived/mult_3nums.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav7h=MSFPpreload("_derived/mult_3nums.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="mult_3nums.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7h.src" onmouseout="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7n.src"><img src="_derived/mult_3nums.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Multiplying 3 Numbers" align="middle" name="MSFPnav7"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav8n=MSFPpreload("_derived/div_num.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav8h=MSFPpreload("_derived/div_num.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="div_num.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8h.src" onmouseout="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8n.src"><img src="_derived/div_num.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Dividing Numbers" align="middle" name="MSFPnav8"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav9n=MSFPpreload("_derived/mult_num.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav9h=MSFPpreload("_derived/mult_num.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="mult_num.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9h.src" onmouseout="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9n.src"><img src="_derived/mult_num.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Multiplying Numbers" align="middle" name="MSFPnav9"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav10n=MSFPpreload("_derived/power.htm_cmp_sumipntg010_hbtn.gif"); MSFPnav10h=MSFPpreload("_derived/power.htm_cmp_sumipntg010_hbtn_a.gif"); }
+// --></script><a href="power.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10h.src" onmouseout="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10n.src"><img src="_derived/power.htm_cmp_sumipntg010_hbtn.gif" width="140" height="40" border="0" alt="Higher Powers" align="middle" name="MSFPnav10"></a><!--webbot bot="Navigation" endspan i-checksum="63260" -->
+</p>
+<p align="center"><i><a href="../pdf_files/approximations/mult_2nums.pdf">(*View/Download .pdf file*)</a></i></p>
+<h4 align="left"><!--mstheme--><font color="#003366">Approximating Multiplying 2 Large Numbers:<!--mstheme--></font></h4>
+<p align="left" style="text-indent: -.25in; margin-left: .25in">A.&nbsp; This
+method uses the same principles as the <i><a href="../pdf_files/multiplying_methods/double_half.pdf">Double
+and Half Method</a></i>.&nbsp; </p>
+<p align="left" style="text-indent: -.25in; margin-left: .75in">1.&nbsp; Since
+we are only approximating, we can add an amount, 'n' to one number and subtract
+'n' from the other number.</p>
+<p align="left" style="text-indent: -.25in; margin-left: .75in">2.&nbsp; In
+doing this, the answer you get will only be n<sup>2</sup> off the correct
+answer.</p>
+<p align="left" style="text-indent: -.25in; margin-left: 1in">Ex [1]&nbsp; 385 x
+432 = __________.</p>
+<p align="left" style="text-indent: -.25in; margin-left: 1.25in">a.&nbsp; We can
+add 15 to 385 to get 400 and subtract 15 from 432 to get 417.</p>
+<p align="left" style="text-indent: -.25in; margin-left: 1.25in">b.&nbsp;
+Multiplying 400 x 417 we get 166800.</p>
+<p align="left" style="text-indent: -.25in; margin-left: 1.25in">c.&nbsp; The
+answer can be between 158004 and 174636.</p>
+<p align="left" style="text-indent: -.25in; margin-left: .25in">B.&nbsp; Because
+we are multiplying large numbers, we have a lot of leniency as to what we can
+do.&nbsp; In Ex [1], we were very close to the right answer.&nbsp; Sometimes, it
+is not so easy:</p>
+<p align="left" style="text-indent: -.25in; margin-left: .75in">Ex [2]&nbsp; 331
+x 498 - 1600 = __________.</p>
+<p align="left" style="text-indent: -.25in; margin-left: 1in">a.&nbsp; In this
+example, we can add 2 to 498 to get 500 and change 331 to 330.&nbsp; Now we can
+multiply.&nbsp; (*Notice that 1600 is not very large so we can ignore it*).</p>
+<p align="left" style="text-indent: -.25in; margin-left: 1in">b.&nbsp; 330 x 500
+= 165000.</p>
+<p align="left" style="text-indent: -.25in; margin-left: 1in">c.&nbsp; The
+answer can be between 155077 - 171399.</p>
+<p align="left" style="text-indent: -.25in; margin-left: .75in">Ex [3]&nbsp; 31<sup>4</sup>
+= __________.</p>
+<p align="left" style="text-indent: -.25in; margin-left: 1in">a.&nbsp; In this
+example first square 31.&nbsp; 31<sup>2</sup> = 961.&nbsp; </p>
+<p align="left" style="text-indent: -.25in; margin-left: 1in">b.&nbsp; Now we
+are left with 961<sup>2</sup>.</p>
+<p align="left" style="text-indent: -.25in; margin-left: 1in">c.&nbsp; Since the
+numbers are really large, add 40 and subtract 40 from each number.</p>
+<p align="left" style="text-indent: -.25in; margin-left: 1in">d.&nbsp; We get
+1000 and 920.&nbsp; Multiplying these we get 920000.</p>
+<p align="left" style="text-indent: -.25in; margin-left: 1in">e.&nbsp; The
+answer can be between 877345 and 969697.</p>
+<p align="left" style="text-indent: -.25in; margin-left: .75in">Ex [4]&nbsp; 875
+x 448 = __________.</p>
+<p align="left" style="text-indent: -.25in; margin-left: 1in">a.&nbsp; In this
+example, we know the 875 = <sup>7000</sup>/<sub>8</sub> but it is still easier
+to change 875 to 900 and 448 to say 420&nbsp; (Notice: You do not have to
+subtract the exact amount 'n' from the other number, just get close).</p>
+<p align="left" style="text-indent: -.25in; margin-left: 1in">b.&nbsp; 900 x 420
+= 378000.</p>
+<p align="left" style="text-indent: -.25in; margin-left: 1in">c.&nbsp; The
+answer can be between 372400 and 411600.</p>
+<p align="left" style="text-indent: -.25in; margin-left: 1in">d.&nbsp; It is not
+advised to try and get the right answer even if you know how.</p>
+<p align="left" style="text-indent: -.25in; margin-left: .25in">C.&nbsp; There
+are numerous possibilities on how you can use this method.&nbsp; Since we are
+generally dealing with large numbers, this makes it very easy to approximate, so
+you should not spend much time working these problems out.</p>
+<p align="left" style="text-indent: -.25in; margin-left: .25in">D. If you do not
+feel comfortable rounding so much, add back in a little to be on the safe
+side.&nbsp; (*If you use this method, you answer will always be lower than the
+actual answer.*)</p>
+<p align="left" style="text-indent: -.25in; margin-left: .25in">&nbsp;</p>
+<p align="center"><a href="#top">Back to top</a></p>
+
+<!--mstheme--></font></body>
+
+</html>
